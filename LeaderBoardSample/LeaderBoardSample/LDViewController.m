@@ -9,6 +9,7 @@
 #import "LDViewController.h"
 #import "AppWarpHelper.h"
 #import "LDLeaderBoard.h"
+#import "LDGameScene.h"
 
 @interface LDViewController ()
 
@@ -40,7 +41,7 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    [_scoreTextField resignFirstResponder];
+    [super viewWillAppear:animated];
 }
 
 -(void)logInWithFacebook {
@@ -50,37 +51,25 @@
 }
 
 #pragma mark - IBActions Methods
-- (IBAction)submitAction:(id)sender {
-    [_scoreTextField resignFirstResponder];
-    int score = 0;
-    if ([[_scoreTextField text] length]) {
-        BOOL valid;
-        NSCharacterSet *alphaNums = [NSCharacterSet decimalDigitCharacterSet];
-        NSCharacterSet *inStringSet = [NSCharacterSet characterSetWithCharactersInString:[_scoreTextField text]];
-        valid = [alphaNums isSupersetOfSet:inStringSet];
+- (IBAction)playAction:(id)sender {
+    CGRect _frame  =CGRectMake(0, 0, self.view.frame.size.height, self.view.frame.size.width);
+    SKView * skView = [[SKView alloc] initWithFrame:_frame];
+
+    if (!skView.scene) {
+        skView.showsFPS = YES;
+        skView.showsNodeCount = YES;
         
-        if(valid) {
-            NSLog(@"Match");
-            score = [[_scoreTextField text] intValue];
-            [[AppWarpHelper sharedAppWarpHelper] setScore:score];
-            [[AppWarpHelper sharedAppWarpHelper] saveScore];
-            [_scoreTextField setText:@""];
-        } else {
-            NSLog(@"Not matched");
-            UIAlertView *_alert = [[UIAlertView alloc] initWithTitle:@"Ooops!!" message:@"Invalid Score, Please provide valid inputs" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-            [_alert show];
-        }
-
-    } else {
-        NSLog(@"Empty Score");
-        UIAlertView *_alert = [[UIAlertView alloc] initWithTitle:@"Ooops!!" message:@"Invalid Score, Please provide valid inputs" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        [_alert show];
-
+        // Create and configure the scene.
+        SKScene * scene = [LDGameScene sceneWithSize:skView.bounds.size];
+        scene.scaleMode = SKSceneScaleModeAspectFill;
+        
+        // Present the scene.
+        [skView presentScene:scene];
     }
+    [[self view] addSubview:skView];
 }
 
 -(IBAction)facebookLogInButtonAction:(id)sender {
-    [_scoreTextField resignFirstResponder];
     [self logInWithFacebook];
 }
 
@@ -89,11 +78,6 @@
     [[self view] addSubview:[aLDView view]];
 }
 
-#pragma mark - Text Field Delegate
-- (BOOL) textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
-    return YES;
-}
 
 #pragma mark - PWFacebookHelper Delegate
 -(void)fbDidNotLogin:(BOOL)cancelled {

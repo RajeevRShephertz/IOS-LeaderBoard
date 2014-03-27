@@ -16,29 +16,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your score" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" id="DrA-lG-2r8">
-                                <rect key="frame" x="105" y="152" width="813" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Zj2-f7-86N"/>
-                                </connections>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0zS-Ex-aCu">
-                                <rect key="frame" x="437" y="219" width="149" height="30"/>
+                                <rect key="frame" x="437" y="348" width="149" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Submit">
+                                <state key="normal" title="Play">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tzc-Dn-as1"/>
+                                    <action selector="playAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ad0-VU-zxd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zqg-z5-Btc">
-                                <rect key="frame" x="467" y="262" width="88" height="30"/>
+                                <rect key="frame" x="467" y="391" width="88" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Leaderboard">
@@ -83,8 +74,6 @@
                     <connections>
                         <outlet property="fbButton" destination="vz7-vr-aE2" id="vsV-Ev-Dvh"/>
                         <outlet property="fbView" destination="a05-Yd-0dw" id="BIY-MC-egM"/>
-                        <outlet property="scoreTextField" destination="DrA-lG-2r8" id="ANG-9T-XF6"/>
-                        <outlet property="submitButton" destination="0zS-Ex-aCu" id="86c-pA-EFU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
