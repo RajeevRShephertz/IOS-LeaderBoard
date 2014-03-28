@@ -11,7 +11,7 @@
 
 @interface AppWarpHelper : NSObject
 {
-    ServiceAPI *serviceAPIObject;
+    BOOL _app42Intialized;
     int numberOfPlayers;
     NSTimer *timer;
 }

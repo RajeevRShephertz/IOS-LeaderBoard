@@ -42,7 +42,7 @@ static AppWarpHelper *appWarpHelper;
         alreadyRegistered = NO;
 		self.roomId = nil;
         numberOfPlayers = 0;
-        serviceAPIObject = nil;
+        _app42Intialized = false;
         timer = nil;
 	}
 	return self;
@@ -69,10 +69,6 @@ static AppWarpHelper *appWarpHelper;
     if (emailId)
     {
         self.emailId=nil;
-    }
-    if (serviceAPIObject)
-    {
-        serviceAPIObject=nil;
     }
 }
 
@@ -146,18 +142,13 @@ static AppWarpHelper *appWarpHelper;
 
 -(BOOL)registerUser
 {
-    if (!serviceAPIObject)
+    if (!_app42Intialized)
     {
-        serviceAPIObject = [[ServiceAPI alloc]init];//Allocate service api object
-        serviceAPIObject.apiKey = APPWARP_APP_KEY;//assign api key
-        serviceAPIObject.secretKey = APPWARP_SECRET_KEY;//assign secret key
+        [App42API initializeWithAPIKey:APP42_APP_KEY andSecretKey:APP42_SECRET_KEY];
         [App42API setDbName:DB_NAME];
+        _app42Intialized = true;
     }
-    
-    
-    UserService *userService = [serviceAPIObject buildUserService];
-    
-    
+    UserService *userService =[App42API buildUserService];
     @try
     {
         
@@ -198,15 +189,13 @@ static AppWarpHelper *appWarpHelper;
 
 -(BOOL)signInUser
 {
-    if (!serviceAPIObject)
+    if (!_app42Intialized)
     {
-        serviceAPIObject = [[ServiceAPI alloc]init];//Allocate service api object
-        serviceAPIObject.apiKey = APPWARP_APP_KEY;//assign api key
-        serviceAPIObject.secretKey = APPWARP_SECRET_KEY;//assign secret key
+        [App42API initializeWithAPIKey:APP42_APP_KEY andSecretKey:APP42_SECRET_KEY];
         [App42API setDbName:DB_NAME];
+        _app42Intialized = true;
     }
-    
-    UserService *userService = [serviceAPIObject buildUserService];
+    UserService *userService =[App42API buildUserService];
     App42Response *app42Response = [userService authenticateUser:userName password:password];
     if (app42Response.isResponseSuccess)
     {
@@ -222,19 +211,17 @@ static AppWarpHelper *appWarpHelper;
 
 -(void)saveScore
 {
-    if (!serviceAPIObject)
+    if (!_app42Intialized)
     {
+        [App42API initializeWithAPIKey:APP42_APP_KEY andSecretKey:APP42_SECRET_KEY];
         [App42API setDbName:DB_NAME];
-        serviceAPIObject = [[ServiceAPI alloc]init];//Allocate service api object
-        serviceAPIObject.apiKey = APPWARP_APP_KEY;//assign api key.
-        serviceAPIObject.secretKey = APPWARP_SECRET_KEY;//assign secret key
+        _app42Intialized = true;
     }
-    
     @try
     {
         NSString *name = [[PWFacebookHelper sharedInstance] userName];
         
-        ScoreBoardService *scoreboardService = [serviceAPIObject buildScoreBoardService];
+        ScoreBoardService *scoreboardService = [App42API buildScoreBoardService];
         NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:self.userName,@"UserID",[NSNumber numberWithInt:score],@"Score",name,@"Name", nil];
         [scoreboardService addCustomScore:dict collectionName:COLLECTION_NAME];
 
@@ -256,13 +243,14 @@ static AppWarpHelper *appWarpHelper;
 }
 
 -(NSMutableArray*)getScores {
-    if (!serviceAPIObject) {
-        serviceAPIObject = [[ServiceAPI alloc]init];//Allocate service api object
-        serviceAPIObject.apiKey = APPWARP_APP_KEY;//assign api key
-        serviceAPIObject.secretKey = APPWARP_SECRET_KEY;//assign secret key
+    if (!_app42Intialized)
+    {
+        [App42API initializeWithAPIKey:APP42_APP_KEY andSecretKey:APP42_SECRET_KEY];
         [App42API setDbName:DB_NAME];
+        _app42Intialized = true;
     }
-    ScoreBoardService *scoreboardService = [serviceAPIObject buildScoreBoardService];
+
+    ScoreBoardService *scoreboardService = [App42API buildScoreBoardService];
     [scoreboardService setQuery:COLLECTION_NAME metaInfoQuery:Nil];
 
     Game *game=[scoreboardService getTopNRankers:GAME_NAME max:MAX_NUMBER_OF_RECORDS_DISPLAYED_IN_LB];
@@ -279,13 +267,14 @@ static AppWarpHelper *appWarpHelper;
 }
 
 - (NSMutableArray *) getFBFriendScores {
-    if (!serviceAPIObject) {
-        serviceAPIObject = [[ServiceAPI alloc]init];//Allocate service api object
-        serviceAPIObject.apiKey = APPWARP_APP_KEY;//assign api key
-        serviceAPIObject.secretKey = APPWARP_SECRET_KEY;//assign secret key
+    if (!_app42Intialized)
+    {
+        [App42API initializeWithAPIKey:APP42_APP_KEY andSecretKey:APP42_SECRET_KEY];
         [App42API setDbName:DB_NAME];
+        _app42Intialized = true;
     }
-    ScoreBoardService *scoreboardService = [serviceAPIObject buildScoreBoardService];
+
+    ScoreBoardService *scoreboardService = [App42API buildScoreBoardService];
     [scoreboardService setQuery:COLLECTION_NAME metaInfoQuery:Nil];
     
     NSString *accessToken = [[[[PWFacebookHelper sharedInstance] loggedInSession] accessTokenData] accessToken];
