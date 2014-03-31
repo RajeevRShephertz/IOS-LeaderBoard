@@ -11,6 +11,7 @@
 		1C3999A518E2E9B400D5F349 /* FacebookSDKResources.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AA8E18D803F40090AD85 /* FacebookSDKResources.bundle */; };
 		1C3999A618E2E9C600D5F349 /* AppWarp_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AA8618D803680090AD85 /* AppWarp_iOS_SDK.framework */; };
 		1C3999A718E2E9C600D5F349 /* Shephertz_App42_iOS_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AA8718D803680090AD85 /* Shephertz_App42_iOS_API.framework */; };
+		1C3DD16A18E9661100161BA7 /* Play_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C3DD16918E9661100161BA7 /* Play_Button.png */; };
 		1C4B467718E401A700F242F1 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4B467618E401A700F242F1 /* SpriteKit.framework */; };
 		1C4B467A18E4032100F242F1 /* LDGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4B467918E4032100F242F1 /* LDGameScene.m */; };
 		1C4B467D18E4039200F242F1 /* LDGameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4B467C18E4039200F242F1 /* LDGameOverScene.m */; };
@@ -72,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C3DD16918E9661100161BA7 /* Play_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Play_Button.png; sourceTree = "<group>"; };
 		1C4B467618E401A700F242F1 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		1C4B467818E4032100F242F1 /* LDGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDGameScene.h; sourceTree = "<group>"; };
 		1C4B467918E4032100F242F1 /* LDGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDGameScene.m; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		1C4B467E18E403E900F242F1 /* GamePlayImages */ = {
 			isa = PBXGroup;
 			children = (
+				1C3DD16918E9661100161BA7 /* Play_Button.png */,
 				1C4B467F18E403E900F242F1 /* bg.png */,
 				1C4B468018E403E900F242F1 /* button_ai.png */,
 				1C4B468118E403E900F242F1 /* button_exit.png */,
@@ -404,6 +407,7 @@
 				1CA5FA7818D9BD9D00FF10A7 /* Back_P.png in Resources */,
 				1CA5FA7F18D9C0AA00FF10A7 /* grid.png in Resources */,
 				1CA5FA7D18D9C0AA00FF10A7 /* button_ai.png in Resources */,
+				1C3DD16A18E9661100161BA7 /* Play_Button.png in Resources */,
 				1CA5FA6A18D9B69700FF10A7 /* LDLeaderBoard_iPhone.xib in Resources */,
 				1C6A95AF18DAF36200033018 /* Game_BG.png in Resources */,
 				1C87AB2C18D304B200012B10 /* Main_iPad.storyboard in Resources */,

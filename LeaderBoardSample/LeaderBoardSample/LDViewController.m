@@ -27,6 +27,8 @@
     } else {
         [_fbView setHidden:NO];
     }
+
+    [_leaderBoardButton setHidden:YES];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -67,6 +69,7 @@
         [skView presentScene:scene];
     }
     [[self view] addSubview:skView];
+    [_leaderBoardButton setHidden:NO];
 }
 
 -(IBAction)facebookLogInButtonAction:(id)sender {

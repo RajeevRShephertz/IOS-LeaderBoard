@@ -13,6 +13,7 @@
 @interface LDViewController : UIViewController <PWFacebookHelperDelegate>
 @property (retain, nonatomic) IBOutlet UIButton *fbButton;
 @property (retain, nonatomic) IBOutlet UIView *fbView;
+@property (retain, nonatomic) IBOutlet UIButton *leaderBoardButton;
 
 - (IBAction)playAction:(id)sender;
 - (IBAction)LeaderBoardButtonAction:(id)sender;

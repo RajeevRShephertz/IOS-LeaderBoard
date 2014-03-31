@@ -48,6 +48,7 @@
     colorChanger = 1;
     [self showAcitvityIndicator];
     
+    [self friendsButtonClicked:nil];
     if (IS_IPHONE5) {
         self.view.frame = CGRectMake(0, 0, 568, 320);
         [leaderboardTableView setFrame:CGRectMake(leaderboardTableView.frame.origin.x+20, leaderboardTableView.frame.origin.y, 288, leaderboardTableView.frame.size.height)];
@@ -205,7 +206,7 @@
         imageView.tag = 1;
         [cell addSubview:imageView];
         
-        x_pos +=imageView.frame.size.width*1.5f;
+        x_pos +=imageView.frame.size.width;
         UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(x_pos, y_pos, labelWidth, 30)];
         nameLabel.backgroundColor = [UIColor clearColor];
         nameLabel.tag =2;
@@ -214,7 +215,7 @@
         [nameLabel setTextColor:[UIColor whiteColor]];
         [cell addSubview:nameLabel];
         
-        x_pos +=labelWidth;
+        x_pos +=labelWidth/1.5;
         UILabel *rankLabel = [[UILabel alloc] initWithFrame:CGRectMake(x_pos, y_pos, labelWidth, 30)];
         rankLabel.backgroundColor = [UIColor clearColor];
         rankLabel.tag =3;
