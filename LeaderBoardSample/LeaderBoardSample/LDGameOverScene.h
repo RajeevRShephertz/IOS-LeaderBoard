@@ -10,6 +10,8 @@
 
 @interface LDGameOverScene : SKScene {
     int _score;
+    UIActivityIndicatorView *activityIndicatorView;
+    UIView *indicatorView;
 }
 
 @end

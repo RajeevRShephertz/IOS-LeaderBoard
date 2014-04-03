@@ -9,10 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "Shephertz_App42_iOS_API/Shephertz_App42_iOS_API.h"
 
+@protocol App42HelperDelegate <NSObject>
+@optional
+- (void) getScoreCompleted;
+- (void) saveScoreCompleted;
+@end
+
 @interface App42Helper : NSObject {
     BOOL _app42Intialized;
 }
-
+@property (nonatomic,assign) id <App42HelperDelegate> delegate;
 @property (nonatomic,retain) NSString *userID;
 @property (nonatomic,assign) int      score;
 
@@ -20,7 +26,7 @@
 
 //App42CloudAPI Handler Methods
 
--(void)saveScore;
+-(BOOL)saveScore;
 -(NSMutableArray*)getScores ;
 -(NSMutableArray *) getFBFriendScores ;
 

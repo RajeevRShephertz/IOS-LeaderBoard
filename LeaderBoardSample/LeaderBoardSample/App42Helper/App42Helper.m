@@ -14,6 +14,7 @@
 static App42Helper *app42Instance;
 
 @implementation App42Helper
+@synthesize delegate = _delegate;
 @synthesize userID  = _userID;
 @synthesize score = _score;
 
@@ -42,7 +43,8 @@ static App42Helper *app42Instance;
 
 #pragma mark --App42CloudAPI Handler Methods
 
--(void)saveScore {
+-(BOOL)saveScore {
+    BOOL _succuess = false;
     if (!_app42Intialized) {
         [App42API initializeWithAPIKey:APP42_APP_KEY andSecretKey:APP42_SECRET_KEY];
         [App42API setDbName:DB_NAME];
@@ -57,13 +59,13 @@ static App42Helper *app42Instance;
         Game *game=[scoreboardService saveUserScore:GAME_NAME gameUserName:_userID gameScore:_score];
         if(game.isResponseSuccess) {
             NSLog(@"saveScore Success");
-            [[[UIAlertView alloc] initWithTitle:@"Success" message:@"Your score submitted successfully" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil] show];
+            _succuess = true;
         }
     }
     @catch (App42Exception *exception) {
         NSLog(@"%@",[exception description]);
     }
-    
+    return _succuess;
 }
 
 -(NSMutableArray*)getScores {

@@ -67,28 +67,38 @@
 
 
 -(void)getScore {
-    [scoreList removeAllObjects];
-    [scoreList addObjectsFromArray:[[App42Helper sharedApp42Helper] getScores]];
-    NSLog(@"scoreList=%@",scoreList);
-    if (scoreList&&[scoreList count]) {
-        messageLabel.hidden = YES;
-    } else {
-        messageLabel.hidden = NO;
-    }
-    [leaderboardTableView reloadData];
-    [self removeAcitvityIndicator];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [scoreList removeAllObjects];
+        [scoreList addObjectsFromArray:[[App42Helper sharedApp42Helper] getScores]];
+        NSLog(@"scoreList=%@",scoreList);
+        if (scoreList&&[scoreList count]) {
+            messageLabel.hidden = YES;
+        } else {
+            messageLabel.hidden = NO;
+        }
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            [leaderboardTableView reloadData];
+            [self removeAcitvityIndicator];
+        });
+    });
 }
 
 -(void)getFriendsScores {
-    [scoreList removeAllObjects];
-    [scoreList addObjectsFromArray:[[App42Helper sharedApp42Helper] getFBFriendScores]];
-    if (scoreList&&[scoreList count]) {
-        messageLabel.hidden = YES;
-    } else {
-        messageLabel.hidden = NO;
-    }
-    [leaderboardTableView reloadData];
-    [self removeAcitvityIndicator];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [scoreList removeAllObjects];
+        [scoreList addObjectsFromArray:[[App42Helper sharedApp42Helper] getFBFriendScores]];
+        if (scoreList&&[scoreList count]) {
+            messageLabel.hidden = YES;
+        } else {
+            messageLabel.hidden = NO;
+        }
+
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            [leaderboardTableView reloadData];
+            [self removeAcitvityIndicator];
+
+        });
+    });
 }
 
 -(void)showAcitvityIndicator {
@@ -141,7 +151,7 @@
     [globalButton setSelected:YES];
     
     [self showAcitvityIndicator];
-    [self performSelectorInBackground:@selector(getScore) withObject:nil];
+    [self getScore];
 }
 
 -(IBAction)friendsButtonClicked:(id)sender {
@@ -149,7 +159,7 @@
     [globalButton setSelected:NO];
     
     [self showAcitvityIndicator];
-    [self performSelectorInBackground:@selector(getFriendsScores) withObject:nil];
+    [self getFriendsScores];
 }
 
 -(IBAction)backButtonClicked:(id)sender {

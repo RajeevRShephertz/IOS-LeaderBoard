@@ -11,9 +11,6 @@
 		1C3999A518E2E9B400D5F349 /* FacebookSDKResources.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AA8E18D803F40090AD85 /* FacebookSDKResources.bundle */; };
 		1C3999A718E2E9C600D5F349 /* Shephertz_App42_iOS_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AA8718D803680090AD85 /* Shephertz_App42_iOS_API.framework */; };
 		1C3DD16A18E9661100161BA7 /* Play_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C3DD16918E9661100161BA7 /* Play_Button.png */; };
-		1C3DD17518EAB76C00161BA7 /* LDLeaderBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3DD17218EAB76C00161BA7 /* LDLeaderBoard.m */; };
-		1C3DD17618EAB76C00161BA7 /* LDLeaderBoard_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C3DD17318EAB76C00161BA7 /* LDLeaderBoard_iPad.xib */; };
-		1C3DD17718EAB76C00161BA7 /* LDLeaderBoard_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C3DD17418EAB76C00161BA7 /* LDLeaderBoard_iPhone.xib */; };
 		1C4B467718E401A700F242F1 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4B467618E401A700F242F1 /* SpriteKit.framework */; };
 		1C4B467A18E4032100F242F1 /* LDGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4B467918E4032100F242F1 /* LDGameScene.m */; };
 		1C4B467D18E4039200F242F1 /* LDGameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4B467C18E4039200F242F1 /* LDGameOverScene.m */; };
@@ -25,6 +22,10 @@
 		1C6A95AB18DAAB9500033018 /* Male_Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C6A95AA18DAAB9500033018 /* Male_Image.png */; };
 		1C6A95AC18DAB3F100033018 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5AA8E18D803F40090AD85 /* FacebookSDKResources.bundle */; };
 		1C6A95AF18DAF36200033018 /* Game_BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C6A95AE18DAF36200033018 /* Game_BG.png */; };
+		1C7C8CAD18ED4337002A1C83 /* App42Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C8CA618ED4337002A1C83 /* App42Helper.m */; };
+		1C7C8CAE18ED4337002A1C83 /* LDLeaderBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C8CAA18ED4337002A1C83 /* LDLeaderBoard.m */; };
+		1C7C8CAF18ED4337002A1C83 /* LDLeaderBoard_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C7C8CAB18ED4337002A1C83 /* LDLeaderBoard_iPad.xib */; };
+		1C7C8CB018ED4337002A1C83 /* LDLeaderBoard_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C7C8CAC18ED4337002A1C83 /* LDLeaderBoard_iPhone.xib */; };
 		1C87AB1618D304B200012B10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C87AB1518D304B200012B10 /* Foundation.framework */; };
 		1C87AB1818D304B200012B10 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C87AB1718D304B200012B10 /* CoreGraphics.framework */; };
 		1C87AB1A18D304B200012B10 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C87AB1918D304B200012B10 /* UIKit.framework */; };
@@ -41,7 +42,6 @@
 		1C87AB4218D304B200012B10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C87AB4018D304B200012B10 /* InfoPlist.strings */; };
 		1C87AB4418D304B200012B10 /* LeaderBoardSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C87AB4318D304B200012B10 /* LeaderBoardSampleTests.m */; };
 		1CA5AA8C18D803CD0090AD85 /* PWFacebookHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5AA8B18D803CD0090AD85 /* PWFacebookHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1CA5AA9E18D805440090AD85 /* App42Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5AA9718D805440090AD85 /* App42Helper.m */; };
 		1CA5AAA318D806B00090AD85 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AAA218D806B00090AD85 /* SystemConfiguration.framework */; };
 		1CA5AAA518D806BA0090AD85 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AAA418D806BA0090AD85 /* Accounts.framework */; };
 		1CA5AAA718D806C50090AD85 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AAA618D806C50090AD85 /* AdSupport.framework */; };
@@ -70,11 +70,6 @@
 
 /* Begin PBXFileReference section */
 		1C3DD16918E9661100161BA7 /* Play_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Play_Button.png; sourceTree = "<group>"; };
-		1C3DD17018EAB76C00161BA7 /* LDConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDConstants.h; sourceTree = "<group>"; };
-		1C3DD17118EAB76C00161BA7 /* LDLeaderBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDLeaderBoard.h; sourceTree = "<group>"; };
-		1C3DD17218EAB76C00161BA7 /* LDLeaderBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDLeaderBoard.m; sourceTree = "<group>"; };
-		1C3DD17318EAB76C00161BA7 /* LDLeaderBoard_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDLeaderBoard_iPad.xib; sourceTree = "<group>"; };
-		1C3DD17418EAB76C00161BA7 /* LDLeaderBoard_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDLeaderBoard_iPhone.xib; sourceTree = "<group>"; };
 		1C4B467618E401A700F242F1 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		1C4B467818E4032100F242F1 /* LDGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDGameScene.h; sourceTree = "<group>"; };
 		1C4B467918E4032100F242F1 /* LDGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDGameScene.m; sourceTree = "<group>"; };
@@ -87,6 +82,13 @@
 		1C4B468318E403E900F242F1 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		1C6A95AA18DAAB9500033018 /* Male_Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Male_Image.png; sourceTree = "<group>"; };
 		1C6A95AE18DAF36200033018 /* Game_BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Game_BG.png; sourceTree = "<group>"; };
+		1C7C8CA518ED4337002A1C83 /* App42Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App42Helper.h; sourceTree = "<group>"; };
+		1C7C8CA618ED4337002A1C83 /* App42Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App42Helper.m; sourceTree = "<group>"; };
+		1C7C8CA818ED4337002A1C83 /* LDConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDConstants.h; sourceTree = "<group>"; };
+		1C7C8CA918ED4337002A1C83 /* LDLeaderBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDLeaderBoard.h; sourceTree = "<group>"; };
+		1C7C8CAA18ED4337002A1C83 /* LDLeaderBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDLeaderBoard.m; sourceTree = "<group>"; };
+		1C7C8CAB18ED4337002A1C83 /* LDLeaderBoard_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDLeaderBoard_iPad.xib; sourceTree = "<group>"; };
+		1C7C8CAC18ED4337002A1C83 /* LDLeaderBoard_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDLeaderBoard_iPhone.xib; sourceTree = "<group>"; };
 		1C87AB1218D304B200012B10 /* LeaderBoardSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeaderBoardSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C87AB1518D304B200012B10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1C87AB1718D304B200012B10 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -112,8 +114,6 @@
 		1CA5AA8B18D803CD0090AD85 /* PWFacebookHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWFacebookHelper.m; sourceTree = "<group>"; };
 		1CA5AA8D18D803F40090AD85 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = LeaderBoardSample/FacebookSDK.framework; sourceTree = "<group>"; };
 		1CA5AA8E18D803F40090AD85 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = LeaderBoardSample/FacebookSDKResources.bundle; sourceTree = "<group>"; };
-		1CA5AA9618D805440090AD85 /* App42Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App42Helper.h; sourceTree = "<group>"; };
-		1CA5AA9718D805440090AD85 /* App42Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App42Helper.m; sourceTree = "<group>"; };
 		1CA5AAA218D806B00090AD85 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1CA5AAA418D806BA0090AD85 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		1CA5AAA618D806C50090AD85 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -163,18 +163,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C3DD16F18EAB76C00161BA7 /* LeaderBoard */ = {
-			isa = PBXGroup;
-			children = (
-				1C3DD17018EAB76C00161BA7 /* LDConstants.h */,
-				1C3DD17118EAB76C00161BA7 /* LDLeaderBoard.h */,
-				1C3DD17218EAB76C00161BA7 /* LDLeaderBoard.m */,
-				1C3DD17318EAB76C00161BA7 /* LDLeaderBoard_iPad.xib */,
-				1C3DD17418EAB76C00161BA7 /* LDLeaderBoard_iPhone.xib */,
-			);
-			path = LeaderBoard;
-			sourceTree = "<group>";
-		};
 		1C4B467E18E403E900F242F1 /* GamePlayImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +174,27 @@
 				1C4B468318E403E900F242F1 /* Spaceship.png */,
 			);
 			name = GamePlayImages;
+			sourceTree = "<group>";
+		};
+		1C7C8CA418ED4337002A1C83 /* App42Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1C7C8CA518ED4337002A1C83 /* App42Helper.h */,
+				1C7C8CA618ED4337002A1C83 /* App42Helper.m */,
+			);
+			path = App42Helper;
+			sourceTree = "<group>";
+		};
+		1C7C8CA718ED4337002A1C83 /* LeaderBoard */ = {
+			isa = PBXGroup;
+			children = (
+				1C7C8CA818ED4337002A1C83 /* LDConstants.h */,
+				1C7C8CA918ED4337002A1C83 /* LDLeaderBoard.h */,
+				1C7C8CAA18ED4337002A1C83 /* LDLeaderBoard.m */,
+				1C7C8CAB18ED4337002A1C83 /* LDLeaderBoard_iPad.xib */,
+				1C7C8CAC18ED4337002A1C83 /* LDLeaderBoard_iPhone.xib */,
+			);
+			path = LeaderBoard;
 			sourceTree = "<group>";
 		};
 		1C87AB0918D304B200012B10 = {
@@ -242,8 +251,8 @@
 				1C4B467C18E4039200F242F1 /* LDGameOverScene.m */,
 				1CA5AA8A18D803CD0090AD85 /* PWFacebookHelper.h */,
 				1CA5AA8B18D803CD0090AD85 /* PWFacebookHelper.m */,
-				1C3DD16F18EAB76C00161BA7 /* LeaderBoard */,
-				1CA5AA9518D805440090AD85 /* AppWarpHelperClasses */,
+				1C7C8CA418ED4337002A1C83 /* App42Helper */,
+				1C7C8CA718ED4337002A1C83 /* LeaderBoard */,
 				1C87AB3018D304B200012B10 /* Images.xcassets */,
 				1CA5FA7918D9C0AA00FF10A7 /* GamePlayImages */,
 				1CA5FA6C18D9BCFE00FF10A7 /* LeaderBoardImages */,
@@ -279,15 +288,6 @@
 				1C87AB4018D304B200012B10 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		1CA5AA9518D805440090AD85 /* AppWarpHelperClasses */ = {
-			isa = PBXGroup;
-			children = (
-				1CA5AA9618D805440090AD85 /* App42Helper.h */,
-				1CA5AA9718D805440090AD85 /* App42Helper.m */,
-			);
-			path = AppWarpHelperClasses;
 			sourceTree = "<group>";
 		};
 		1CA5FA6C18D9BCFE00FF10A7 /* LeaderBoardImages */ = {
@@ -393,7 +393,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C3DD17618EAB76C00161BA7 /* LDLeaderBoard_iPad.xib in Resources */,
+				1C7C8CAF18ED4337002A1C83 /* LDLeaderBoard_iPad.xib in Resources */,
 				1CA5FA7818D9BD9D00FF10A7 /* Back_P.png in Resources */,
 				1CA5FA7F18D9C0AA00FF10A7 /* grid.png in Resources */,
 				1CA5FA7D18D9C0AA00FF10A7 /* button_ai.png in Resources */,
@@ -401,7 +401,7 @@
 				1C6A95AF18DAF36200033018 /* Game_BG.png in Resources */,
 				1C87AB2C18D304B200012B10 /* Main_iPad.storyboard in Resources */,
 				1C6A95AC18DAB3F100033018 /* FacebookSDKResources.bundle in Resources */,
-				1C3DD17718EAB76C00161BA7 /* LDLeaderBoard_iPhone.xib in Resources */,
+				1C7C8CB018ED4337002A1C83 /* LDLeaderBoard_iPhone.xib in Resources */,
 				1CA5FA7118D9BCFE00FF10A7 /* Leaderboard_BG.png in Resources */,
 				1C87AB3118D304B200012B10 /* Images.xcassets in Resources */,
 				1CA5FA7218D9BCFE00FF10A7 /* Login_Bg.png in Resources */,
@@ -436,13 +436,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C4B467D18E4039200F242F1 /* LDGameOverScene.m in Sources */,
-				1CA5AA9E18D805440090AD85 /* App42Helper.m in Sources */,
 				1C87AB2618D304B200012B10 /* LDAppDelegate.m in Sources */,
+				1C7C8CAD18ED4337002A1C83 /* App42Helper.m in Sources */,
 				1C4B467A18E4032100F242F1 /* LDGameScene.m in Sources */,
-				1C3DD17518EAB76C00161BA7 /* LDLeaderBoard.m in Sources */,
 				1C87AB2218D304B200012B10 /* main.m in Sources */,
 				1CA5AA8C18D803CD0090AD85 /* PWFacebookHelper.m in Sources */,
 				1C87AB2F18D304B200012B10 /* LDViewController.m in Sources */,
+				1C7C8CAE18ED4337002A1C83 /* LDLeaderBoard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
