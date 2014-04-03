@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1C3999A418E2E9B400D5F349 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AA8D18D803F40090AD85 /* FacebookSDK.framework */; };
 		1C3999A518E2E9B400D5F349 /* FacebookSDKResources.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AA8E18D803F40090AD85 /* FacebookSDKResources.bundle */; };
-		1C3999A618E2E9C600D5F349 /* AppWarp_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AA8618D803680090AD85 /* AppWarp_iOS_SDK.framework */; };
 		1C3999A718E2E9C600D5F349 /* Shephertz_App42_iOS_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AA8718D803680090AD85 /* Shephertz_App42_iOS_API.framework */; };
 		1C3DD16A18E9661100161BA7 /* Play_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C3DD16918E9661100161BA7 /* Play_Button.png */; };
 		1C3DD17518EAB76C00161BA7 /* LDLeaderBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3DD17218EAB76C00161BA7 /* LDLeaderBoard.m */; };
@@ -42,10 +41,7 @@
 		1C87AB4218D304B200012B10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C87AB4018D304B200012B10 /* InfoPlist.strings */; };
 		1C87AB4418D304B200012B10 /* LeaderBoardSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C87AB4318D304B200012B10 /* LeaderBoardSampleTests.m */; };
 		1CA5AA8C18D803CD0090AD85 /* PWFacebookHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5AA8B18D803CD0090AD85 /* PWFacebookHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1CA5AA9E18D805440090AD85 /* AppWarpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5AA9718D805440090AD85 /* AppWarpHelper.m */; };
-		1CA5AA9F18D805440090AD85 /* ConnectionListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5AA9918D805440090AD85 /* ConnectionListener.m */; };
-		1CA5AAA018D805440090AD85 /* NotificationListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5AA9B18D805440090AD85 /* NotificationListener.m */; };
-		1CA5AAA118D805440090AD85 /* RoomListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5AA9D18D805440090AD85 /* RoomListener.m */; };
+		1CA5AA9E18D805440090AD85 /* App42Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5AA9718D805440090AD85 /* App42Helper.m */; };
 		1CA5AAA318D806B00090AD85 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AAA218D806B00090AD85 /* SystemConfiguration.framework */; };
 		1CA5AAA518D806BA0090AD85 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AAA418D806BA0090AD85 /* Accounts.framework */; };
 		1CA5AAA718D806C50090AD85 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AAA618D806C50090AD85 /* AdSupport.framework */; };
@@ -111,20 +107,13 @@
 		1C87AB3F18D304B200012B10 /* LeaderBoardSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LeaderBoardSampleTests-Info.plist"; sourceTree = "<group>"; };
 		1C87AB4118D304B200012B10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1C87AB4318D304B200012B10 /* LeaderBoardSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardSampleTests.m; sourceTree = "<group>"; };
-		1CA5AA8618D803680090AD85 /* AppWarp_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppWarp_iOS_SDK.framework; sourceTree = "<group>"; };
 		1CA5AA8718D803680090AD85 /* Shephertz_App42_iOS_API.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Shephertz_App42_iOS_API.framework; sourceTree = "<group>"; };
 		1CA5AA8A18D803CD0090AD85 /* PWFacebookHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWFacebookHelper.h; sourceTree = "<group>"; };
 		1CA5AA8B18D803CD0090AD85 /* PWFacebookHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWFacebookHelper.m; sourceTree = "<group>"; };
 		1CA5AA8D18D803F40090AD85 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = LeaderBoardSample/FacebookSDK.framework; sourceTree = "<group>"; };
 		1CA5AA8E18D803F40090AD85 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = LeaderBoardSample/FacebookSDKResources.bundle; sourceTree = "<group>"; };
-		1CA5AA9618D805440090AD85 /* AppWarpHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppWarpHelper.h; sourceTree = "<group>"; };
-		1CA5AA9718D805440090AD85 /* AppWarpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppWarpHelper.m; sourceTree = "<group>"; };
-		1CA5AA9818D805440090AD85 /* ConnectionListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionListener.h; sourceTree = "<group>"; };
-		1CA5AA9918D805440090AD85 /* ConnectionListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionListener.m; sourceTree = "<group>"; };
-		1CA5AA9A18D805440090AD85 /* NotificationListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationListener.h; sourceTree = "<group>"; };
-		1CA5AA9B18D805440090AD85 /* NotificationListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationListener.m; sourceTree = "<group>"; };
-		1CA5AA9C18D805440090AD85 /* RoomListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomListener.h; sourceTree = "<group>"; };
-		1CA5AA9D18D805440090AD85 /* RoomListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomListener.m; sourceTree = "<group>"; };
+		1CA5AA9618D805440090AD85 /* App42Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App42Helper.h; sourceTree = "<group>"; };
+		1CA5AA9718D805440090AD85 /* App42Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App42Helper.m; sourceTree = "<group>"; };
 		1CA5AAA218D806B00090AD85 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1CA5AAA418D806BA0090AD85 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		1CA5AAA618D806C50090AD85 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -147,7 +136,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C4B467718E401A700F242F1 /* SpriteKit.framework in Frameworks */,
-				1C3999A618E2E9C600D5F349 /* AppWarp_iOS_SDK.framework in Frameworks */,
 				1C3999A718E2E9C600D5F349 /* Shephertz_App42_iOS_API.framework in Frameworks */,
 				1C3999A418E2E9B400D5F349 /* FacebookSDK.framework in Frameworks */,
 				1C3999A518E2E9B400D5F349 /* FacebookSDKResources.bundle in Frameworks */,
@@ -230,7 +218,6 @@
 				1CA5AAA218D806B00090AD85 /* SystemConfiguration.framework */,
 				1CA5AA8D18D803F40090AD85 /* FacebookSDK.framework */,
 				1CA5AA8E18D803F40090AD85 /* FacebookSDKResources.bundle */,
-				1CA5AA8618D803680090AD85 /* AppWarp_iOS_SDK.framework */,
 				1CA5AA8718D803680090AD85 /* Shephertz_App42_iOS_API.framework */,
 				1C87AB1518D304B200012B10 /* Foundation.framework */,
 				1C87AB1718D304B200012B10 /* CoreGraphics.framework */,
@@ -297,14 +284,8 @@
 		1CA5AA9518D805440090AD85 /* AppWarpHelperClasses */ = {
 			isa = PBXGroup;
 			children = (
-				1CA5AA9618D805440090AD85 /* AppWarpHelper.h */,
-				1CA5AA9718D805440090AD85 /* AppWarpHelper.m */,
-				1CA5AA9818D805440090AD85 /* ConnectionListener.h */,
-				1CA5AA9918D805440090AD85 /* ConnectionListener.m */,
-				1CA5AA9A18D805440090AD85 /* NotificationListener.h */,
-				1CA5AA9B18D805440090AD85 /* NotificationListener.m */,
-				1CA5AA9C18D805440090AD85 /* RoomListener.h */,
-				1CA5AA9D18D805440090AD85 /* RoomListener.m */,
+				1CA5AA9618D805440090AD85 /* App42Helper.h */,
+				1CA5AA9718D805440090AD85 /* App42Helper.m */,
 			);
 			path = AppWarpHelperClasses;
 			sourceTree = "<group>";
@@ -455,13 +436,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C4B467D18E4039200F242F1 /* LDGameOverScene.m in Sources */,
-				1CA5AA9E18D805440090AD85 /* AppWarpHelper.m in Sources */,
-				1CA5AA9F18D805440090AD85 /* ConnectionListener.m in Sources */,
+				1CA5AA9E18D805440090AD85 /* App42Helper.m in Sources */,
 				1C87AB2618D304B200012B10 /* LDAppDelegate.m in Sources */,
 				1C4B467A18E4032100F242F1 /* LDGameScene.m in Sources */,
-				1CA5AAA018D805440090AD85 /* NotificationListener.m in Sources */,
 				1C3DD17518EAB76C00161BA7 /* LDLeaderBoard.m in Sources */,
-				1CA5AAA118D805440090AD85 /* RoomListener.m in Sources */,
 				1C87AB2218D304B200012B10 /* main.m in Sources */,
 				1CA5AA8C18D803CD0090AD85 /* PWFacebookHelper.m in Sources */,
 				1C87AB2F18D304B200012B10 /* LDViewController.m in Sources */,

@@ -12,10 +12,6 @@
 #define APP42_APP_KEY         @"178168768c9d458f84d6da29a9215c1e87daf298c41c3c2bdf63198ef22d7eaf"
 #define APP42_SECRET_KEY   @"180dd662dab71b482a99babbf7e57fba99595b82e3113fae28ab020c0cb1215f"
 
-
-#define APPWARP_APP_KEY     @""
-#define APPWARP_SECRET_KEY  @""
-
 #define GAME_NAME                   @"iOSLeaderBoard"
 
 #define DB_NAME                       @"ScoreDB"

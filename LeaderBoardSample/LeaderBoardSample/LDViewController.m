@@ -7,7 +7,7 @@
 //
 
 #import "LDViewController.h"
-#import "AppWarpHelper.h"
+#import "App42Helper.h"
 #import "LDLeaderBoard.h"
 #import "LDGameScene.h"
 
@@ -22,7 +22,7 @@
     [super viewDidLoad];
     NSString *anID = [[PWFacebookHelper sharedInstance] userId];
     if ([anID length]) {
-        [[AppWarpHelper sharedAppWarpHelper] setUserName:[[PWFacebookHelper sharedInstance] userId]];
+        [[App42Helper sharedApp42Helper] setUserID:[[PWFacebookHelper sharedInstance] userId]];
         [_fbView setHidden:YES];
     } else {
         [_fbView setHidden:NO];
@@ -92,7 +92,7 @@
     NSLog(@"%@",[[PWFacebookHelper sharedInstance] userId]);
     NSString *anID = [[PWFacebookHelper sharedInstance] userId];
     if ([anID length]) {
-        [[AppWarpHelper sharedAppWarpHelper] setUserName:[[PWFacebookHelper sharedInstance] userId]];
+        [[App42Helper sharedApp42Helper] setUserID:[[PWFacebookHelper sharedInstance] userId]];
         [_fbView setHidden:YES];
     }
 }

@@ -7,7 +7,7 @@
 //
 
 #import "LDLeaderBoard.h"
-#import "AppWarpHelper.h"
+#import "App42Helper.h"
 
 @implementation LDLeaderBoard
 
@@ -68,7 +68,7 @@
 
 -(void)getScore {
     [scoreList removeAllObjects];
-    [scoreList addObjectsFromArray:[[AppWarpHelper sharedAppWarpHelper] getScores]];
+    [scoreList addObjectsFromArray:[[App42Helper sharedApp42Helper] getScores]];
     NSLog(@"scoreList=%@",scoreList);
     if (scoreList&&[scoreList count]) {
         messageLabel.hidden = YES;
@@ -81,7 +81,7 @@
 
 -(void)getFriendsScores {
     [scoreList removeAllObjects];
-    [scoreList addObjectsFromArray:[[AppWarpHelper sharedAppWarpHelper] getFBFriendScores]];
+    [scoreList addObjectsFromArray:[[App42Helper sharedApp42Helper] getFBFriendScores]];
     if (scoreList&&[scoreList count]) {
         messageLabel.hidden = YES;
     } else {

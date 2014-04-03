@@ -7,7 +7,7 @@
 //
 
 #import "LDGameOverScene.h"
-#import "AppWarpHelper.h"
+#import "App42Helper.h"
 
 @implementation LDGameOverScene
 
@@ -60,8 +60,8 @@
     SKNode *node = [self nodeAtPoint:location];
     
     if ([node.name isEqualToString:@"submit"]) {
-        [[AppWarpHelper sharedAppWarpHelper] setScore:_score];
-        [[AppWarpHelper sharedAppWarpHelper] saveScore];
+        [[App42Helper sharedApp42Helper] setScore:_score];
+        [[App42Helper sharedApp42Helper] saveScore];
         [self.view removeFromSuperview];
     }
 }
