@@ -42,7 +42,7 @@
                             </button>
                             <view contentMode="scaleToFill" id="A7d-KV-Gaa" userLabel="FB View">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view alpha="0.80000000000000004" contentMode="scaleToFill" id="Tmt-73-zUw">
                                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
