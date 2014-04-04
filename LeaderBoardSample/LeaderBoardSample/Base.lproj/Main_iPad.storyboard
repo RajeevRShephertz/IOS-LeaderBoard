@@ -40,30 +40,6 @@
                                     <action selector="LeaderBoardButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yoY-54-SVQ"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" id="a05-Yd-0dw" userLabel="FB View">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view alpha="0.80000000000000004" contentMode="scaleToFill" id="AOv-MB-KiU">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vz7-vr-aE2">
-                                        <rect key="frame" x="402" y="369" width="219" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <color key="backgroundColor" red="0.45825614739999998" green="0.53850051430000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Facebook Login">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="facebookLogInButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jsr-AD-uNe"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -72,8 +48,6 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="fbButton" destination="vz7-vr-aE2" id="vsV-Ev-Dvh"/>
-                        <outlet property="fbView" destination="a05-Yd-0dw" id="BIY-MC-egM"/>
                         <outlet property="leaderBoardButton" destination="Zqg-z5-Btc" id="34K-Mk-FeG"/>
                     </connections>
                 </viewController>

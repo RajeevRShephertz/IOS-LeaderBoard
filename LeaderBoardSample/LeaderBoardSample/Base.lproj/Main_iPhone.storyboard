@@ -30,7 +30,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xDz-1j-7X5">
                                 <rect key="frame" x="195" y="181" width="178" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Leaderboard" backgroundImage="Play_Button.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -40,30 +40,6 @@
                                     <action selector="LeaderBoardButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Qhd-q4-LhB"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" id="A7d-KV-Gaa" userLabel="FB View">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view alpha="0.80000000000000004" contentMode="scaleToFill" id="Tmt-73-zUw">
-                                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="88I-Rd-bry">
-                                        <rect key="frame" x="200" y="145" width="168" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
-                                        <color key="backgroundColor" red="0.45825614739999998" green="0.53850051430000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Facebook Login">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="facebookLogInButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WA6-jP-Mr7"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -73,8 +49,6 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="fbButton" destination="88I-Rd-bry" id="7l8-Dp-MSF"/>
-                        <outlet property="fbView" destination="A7d-KV-Gaa" id="Vkv-3Z-BKh"/>
                         <outlet property="leaderBoardButton" destination="xDz-1j-7X5" id="8O8-dV-qdX"/>
                     </connections>
                 </viewController>

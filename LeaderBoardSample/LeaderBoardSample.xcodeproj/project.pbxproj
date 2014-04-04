@@ -56,6 +56,7 @@
 		1CA5FA7D18D9C0AA00FF10A7 /* button_ai.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5FA7A18D9C0AA00FF10A7 /* button_ai.png */; };
 		1CA5FA7E18D9C0AA00FF10A7 /* button_exit.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5FA7B18D9C0AA00FF10A7 /* button_exit.png */; };
 		1CA5FA7F18D9C0AA00FF10A7 /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5FA7C18D9C0AA00FF10A7 /* grid.png */; };
+		1CFB631918EE8D9700597048 /* Login_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CFB631818EE8D9700597048 /* Login_facebook.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		1CA5FA7A18D9C0AA00FF10A7 /* button_ai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_ai.png; sourceTree = "<group>"; };
 		1CA5FA7B18D9C0AA00FF10A7 /* button_exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_exit.png; sourceTree = "<group>"; };
 		1CA5FA7C18D9C0AA00FF10A7 /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grid.png; sourceTree = "<group>"; };
+		1CFB631818EE8D9700597048 /* Login_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login_facebook.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 		1C4B467E18E403E900F242F1 /* GamePlayImages */ = {
 			isa = PBXGroup;
 			children = (
+				1CFB631818EE8D9700597048 /* Login_facebook.png */,
 				1C3DD16918E9661100161BA7 /* Play_Button.png */,
 				1C4B467F18E403E900F242F1 /* bg.png */,
 				1C4B468018E403E900F242F1 /* button_ai.png */,
@@ -394,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C7C8CAF18ED4337002A1C83 /* LDLeaderBoard_iPad.xib in Resources */,
+				1CFB631918EE8D9700597048 /* Login_facebook.png in Resources */,
 				1CA5FA7818D9BD9D00FF10A7 /* Back_P.png in Resources */,
 				1CA5FA7F18D9C0AA00FF10A7 /* grid.png in Resources */,
 				1CA5FA7D18D9C0AA00FF10A7 /* button_ai.png in Resources */,

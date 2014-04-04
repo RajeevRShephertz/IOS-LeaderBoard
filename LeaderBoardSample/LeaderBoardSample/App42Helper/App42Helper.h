@@ -16,18 +16,20 @@
 @end
 
 @interface App42Helper : NSObject {
-    BOOL _app42Intialized;
+
 }
+
 @property (nonatomic,assign) id <App42HelperDelegate> delegate;
 @property (nonatomic,retain) NSString *userID;
 @property (nonatomic,assign) int      score;
 
 +(App42Helper *)sharedApp42Helper ;
 
-//App42CloudAPI Handler Methods
+- (void)initializeApp42;
 
+//App42CloudAPI Handler Methods
 -(BOOL)saveScore;
--(NSMutableArray*)getScores ;
+-(NSMutableArray*)getScores;
 -(NSMutableArray *) getFBFriendScores ;
 
 

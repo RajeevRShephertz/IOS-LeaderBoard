@@ -20,15 +20,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *anID = [[PWFacebookHelper sharedInstance] userId];
-    if ([anID length]) {
-        [[App42Helper sharedApp42Helper] setUserID:[[PWFacebookHelper sharedInstance] userId]];
-        [_fbView setHidden:YES];
-    } else {
-        [_fbView setHidden:NO];
-    }
-
+    
     [_leaderBoardButton setHidden:YES];
+    
+    [[App42Helper sharedApp42Helper] initializeApp42];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -46,20 +42,14 @@
     [super viewWillAppear:animated];
 }
 
--(void)logInWithFacebook {
-    [[PWFacebookHelper sharedInstance] setDelegate:self];
-    BOOL isOpen = [[PWFacebookHelper sharedInstance] openSessionWithAllowLoginUI:YES];
-    NSLog(@"isSessionOpen=%d",isOpen);
-}
-
 #pragma mark - IBActions Methods
 - (IBAction)playAction:(id)sender {
     CGRect _frame  =CGRectMake(0, 0, self.view.frame.size.height, self.view.frame.size.width);
     SKView * skView = [[SKView alloc] initWithFrame:_frame];
 
     if (!skView.scene) {
-        skView.showsFPS = YES;
-        skView.showsNodeCount = YES;
+        skView.showsFPS = NO;
+        skView.showsNodeCount = NO;
         
         // Create and configure the scene.
         SKScene * scene = [LDGameScene sceneWithSize:skView.bounds.size];
@@ -72,29 +62,14 @@
     [_leaderBoardButton setHidden:NO];
 }
 
--(IBAction)facebookLogInButtonAction:(id)sender {
-    [self logInWithFacebook];
-}
-
 - (IBAction)LeaderBoardButtonAction:(id)sender {
-    LDLeaderBoard *aLDView = [[LDLeaderBoard alloc] initWithNibName:@"LDLeaderBoard" bundle:nil];
-    [[self view] addSubview:[aLDView view]];
-}
-
-
-#pragma mark - PWFacebookHelper Delegate
--(void)fbDidNotLogin:(BOOL)cancelled {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Error:" message: @"Login Failed!" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
-}
-
--(void)userDidLoggedIn {
-    NSLog(@"%@",[[PWFacebookHelper sharedInstance] userId]);
     NSString *anID = [[PWFacebookHelper sharedInstance] userId];
     if ([anID length]) {
         [[App42Helper sharedApp42Helper] setUserID:[[PWFacebookHelper sharedInstance] userId]];
-        [_fbView setHidden:YES];
+        LDLeaderBoard *aLDView = [[LDLeaderBoard alloc] initWithNibName:@"LDLeaderBoard" bundle:nil];
+        [[self view] addSubview:[aLDView view]];
     }
 }
+
 
 @end

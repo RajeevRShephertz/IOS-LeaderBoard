@@ -48,7 +48,7 @@
     colorChanger = 1;
     [self showAcitvityIndicator];
     
-    [self friendsButtonClicked:nil];
+    [self globalButtonClicked:nil];
     if (IS_IPHONE5) {
         self.view.frame = CGRectMake(0, 0, 568, 320);
         [leaderboardTableView setFrame:CGRectMake(leaderboardTableView.frame.origin.x+20, leaderboardTableView.frame.origin.y, 288, leaderboardTableView.frame.size.height)];

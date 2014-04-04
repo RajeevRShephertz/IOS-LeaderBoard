@@ -7,11 +7,21 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "PWFacebookHelper.h"
 
-@interface LDGameOverScene : SKScene {
+@interface LDGameOverScene : SKScene <PWFacebookHelperDelegate>{
     int _score;
     UIActivityIndicatorView *activityIndicatorView;
     UIView *indicatorView;
+    UILabel *loadingLabel;
+    
+    UIView *fbButtonView;
 }
+
+
+-(void)initializeGameOverView;
+-(void)showAcitvityIndicator;
+-(void)removeAcitvityIndicator;
+-(void)logInWithFacebook;
 
 @end

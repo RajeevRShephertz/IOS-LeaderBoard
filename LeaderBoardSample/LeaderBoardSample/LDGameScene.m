@@ -25,15 +25,15 @@
 static const uint32_t shipCategory =  0x1 << 0;
 static const uint32_t obstacleCategory =  0x1 << 1;
 
-static const float BG_VELOCITY = 100.0;
-static const float OBJECT_VELOCITY = 160.0;
+static const float Bacground_Velocity = 100.0;
+static const float Object_velocity = 160.0;
 
 static inline CGPoint CGPointAdd(const CGPoint a, const CGPoint b)
 {
     return CGPointMake(a.x + b.x, a.y + b.y);
 }
 
-static inline CGPoint CGPointMultiplyScalar(const CGPoint a, const CGFloat b)
+static inline CGPoint CGPointMultiply(const CGPoint a, const CGFloat b)
 {
     return CGPointMake(a.x * b, a.y * b);
 }
@@ -93,7 +93,7 @@ static inline CGPoint CGPointMultiplyScalar(const CGPoint a, const CGFloat b)
     missile.name = @"missile";
     
     //selecting random y position for missile
-    int r = arc4random() % 300;
+    int r = arc4random() % (int)self.frame.size.height;
     missile.position = CGPointMake(self.frame.size.width + 20,r);
     
     [self addChild:missile];
@@ -134,8 +134,8 @@ static inline CGPoint CGPointMultiplyScalar(const CGPoint a, const CGFloat b)
     [self enumerateChildNodesWithName:@"bg" usingBlock: ^(SKNode *node, BOOL *stop)
      {
          SKSpriteNode * bg = (SKSpriteNode *) node;
-         CGPoint bgVelocity = CGPointMake(-BG_VELOCITY, 0);
-         CGPoint amtToMove = CGPointMultiplyScalar(bgVelocity,_dt);
+         CGPoint bgVelocity = CGPointMake(-Bacground_Velocity, 0);
+         CGPoint amtToMove = CGPointMultiply(bgVelocity,_dt);
          bg.position = CGPointAdd(bg.position, amtToMove);
          
          //Checks if bg node is completely scrolled of the screen, if yes then put it at the end of the other node
@@ -154,8 +154,8 @@ static inline CGPoint CGPointMultiplyScalar(const CGPoint a, const CGFloat b)
     for(SKNode * node in nodes){
         if (![node.name  isEqual: @"bg"] && ![node.name  isEqual: @"ship"]) {
             SKSpriteNode *ob = (SKSpriteNode *) node;
-            CGPoint obVelocity = CGPointMake(-OBJECT_VELOCITY, 0);
-            CGPoint amtToMove = CGPointMultiplyScalar(obVelocity,_dt);
+            CGPoint obVelocity = CGPointMake(-Object_velocity, 0);
+            CGPoint amtToMove = CGPointMultiply(obVelocity,_dt);
             
             ob.position = CGPointAdd(ob.position, amtToMove);
             if(ob.position.x < -100)

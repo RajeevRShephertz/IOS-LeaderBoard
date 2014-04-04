@@ -29,7 +29,6 @@ static App42Helper *app42Instance;
 	self = [super init];
 	if (self != nil) {
         _userID    = nil;
-        _app42Intialized = false;
         _score = 0;
 	}
 	return self;
@@ -41,15 +40,15 @@ static App42Helper *app42Instance;
     }
 }
 
+- (void)initializeApp42 {
+    [App42API initializeWithAPIKey:APP42_APP_KEY andSecretKey:APP42_SECRET_KEY];
+    [App42API setDbName:DB_NAME];
+}
+
 #pragma mark --App42CloudAPI Handler Methods
 
 -(BOOL)saveScore {
     BOOL _succuess = false;
-    if (!_app42Intialized) {
-        [App42API initializeWithAPIKey:APP42_APP_KEY andSecretKey:APP42_SECRET_KEY];
-        [App42API setDbName:DB_NAME];
-        _app42Intialized = true;
-    }
     @try {
         NSString *name = [[PWFacebookHelper sharedInstance] userName];
         ScoreBoardService *scoreboardService = [App42API buildScoreBoardService];
@@ -69,12 +68,6 @@ static App42Helper *app42Instance;
 }
 
 -(NSMutableArray*)getScores {
-    if (!_app42Intialized) {
-        [App42API initializeWithAPIKey:APP42_APP_KEY andSecretKey:APP42_SECRET_KEY];
-        [App42API setDbName:DB_NAME];
-        _app42Intialized = true;
-    }
-
     ScoreBoardService *scoreboardService = [App42API buildScoreBoardService];
     [scoreboardService setQuery:COLLECTION_NAME metaInfoQuery:Nil];
 
@@ -84,12 +77,6 @@ static App42Helper *app42Instance;
 }
 
 -(NSMutableArray *) getFBFriendScores {
-    if (!_app42Intialized) {
-        [App42API initializeWithAPIKey:APP42_APP_KEY andSecretKey:APP42_SECRET_KEY];
-        [App42API setDbName:DB_NAME];
-        _app42Intialized = true;
-    }
-
     ScoreBoardService *scoreboardService = [App42API buildScoreBoardService];
     [scoreboardService setQuery:COLLECTION_NAME metaInfoQuery:Nil];
     
