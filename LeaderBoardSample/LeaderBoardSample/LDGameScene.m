@@ -214,6 +214,7 @@ static inline CGPoint CGPointMultiply(const CGPoint a, const CGFloat b)
         SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
         LDGameOverScene * gameOverScene = [[LDGameOverScene alloc] initWithSize:self.size];
         gameOverScene.obstacleCount = passedObstacleCount;
+        [gameOverScene initializeGameOverView];
         [self.view presentScene:gameOverScene transition: reveal];
         
     }
