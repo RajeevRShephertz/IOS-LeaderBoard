@@ -17,7 +17,7 @@
     
     UIView *fbButtonView;
 }
-
+@property (nonatomic, assign) int obstacleCount;
 
 -(void)initializeGameOverView;
 -(void)showAcitvityIndicator;

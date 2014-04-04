@@ -44,6 +44,7 @@ static inline CGPoint CGPointMultiply(const CGPoint a, const CGFloat b)
         [self initalizingScrollingBackground];
         [self addShip];
         
+        passedObstacleCount = 0;
         //Making self delegate of physics World
         self.physicsWorld.gravity = CGVectorMake(0,0);
         self.physicsWorld.contactDelegate = self;
@@ -161,6 +162,7 @@ static inline CGPoint CGPointMultiply(const CGPoint a, const CGFloat b)
             if(ob.position.x < -100)
             {
                 [ob removeFromParent];
+                passedObstacleCount++;
             }
         }
     }
@@ -210,7 +212,8 @@ static inline CGPoint CGPointMultiply(const CGPoint a, const CGFloat b)
     {
         [ship removeFromParent];
         SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
-        SKScene * gameOverScene = [[LDGameOverScene alloc] initWithSize:self.size];
+        LDGameOverScene * gameOverScene = [[LDGameOverScene alloc] initWithSize:self.size];
+        gameOverScene.obstacleCount = passedObstacleCount;
         [self.view presentScene:gameOverScene transition: reveal];
         
     }

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 
-@interface LDGameScene : SKScene <SKPhysicsContactDelegate>
+@interface LDGameScene : SKScene <SKPhysicsContactDelegate> {
+    int passedObstacleCount;
+}
 
 @end

@@ -11,6 +11,7 @@
 #import "LDGameScene.h"
 
 @implementation LDGameOverScene
+@synthesize obstacleCount = _obstacleCount;
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
@@ -39,7 +40,8 @@
     label.position = CGPointMake(self.size.width/2, self.size.height/2 + 50 );
     [self addChild:label];
     
-    _score = arc4random()%3000;
+    _score = _obstacleCount * 50;
+    
     SKLabelNode *scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
     scoreLabel.text = [NSString stringWithFormat:@"Score: %d",_score];
     scoreLabel.fontSize = 40;
