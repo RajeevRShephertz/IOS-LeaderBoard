@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 
 
-#define APP42_APP_KEY         <Your App Key>
-#define APP42_SECRET_KEY      <Your Secret Key>
+#define APP42_APP_KEY         @""//<Your App Key>
+#define APP42_SECRET_KEY      @""//<Your Secret Key>
 
-#define GAME_NAME             <Your Game Name>
+#define GAME_NAME             @""//<Your Game Name>
 
 #define DB_NAME               @"ScoreDB"
 #define COLLECTION_NAME       @"ScoreCollection"

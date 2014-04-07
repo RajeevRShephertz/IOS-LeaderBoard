@@ -48,7 +48,7 @@ static App42Helper *app42Instance;
 #pragma mark --App42CloudAPI Handler Methods
 
 -(BOOL)saveScore {
-    BOOL _succuess = false;
+    BOOL _success = false;
     @try {
         NSString *name = [[PWFacebookHelper sharedInstance] userName];
         ScoreBoardService *scoreboardService = [App42API buildScoreBoardService];
@@ -58,13 +58,13 @@ static App42Helper *app42Instance;
         Game *game=[scoreboardService saveUserScore:GAME_NAME gameUserName:_userID gameScore:_score];
         if(game.isResponseSuccess) {
             NSLog(@"saveScore Success");
-            _succuess = true;
+            _success = true;
         }
     }
     @catch (App42Exception *exception) {
         NSLog(@"%@",[exception description]);
     }
-    return _succuess;
+    return _success;
 }
 
 -(NSMutableArray*)getScores {
