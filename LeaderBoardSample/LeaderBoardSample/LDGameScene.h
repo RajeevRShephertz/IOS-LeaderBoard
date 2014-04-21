@@ -11,6 +11,7 @@
 
 @interface LDGameScene : SKScene <SKPhysicsContactDelegate> {
     int passedObstacleCount;
+    int lifes;
 }
 
 @end

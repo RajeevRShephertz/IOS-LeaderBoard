@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 
 
-#define APP42_APP_KEY         @""//<Your App Key>
-#define APP42_SECRET_KEY      @""//<Your Secret Key>
+#define APP42_APP_KEY         @"178168768c9d458f84d6da29a9215c1e87daf298c41c3c2bdf63198ef22d7eaf"//<Your App Key>
+#define APP42_SECRET_KEY      @"180dd662dab71b482a99babbf7e57fba99595b82e3113fae28ab020c0cb1215f"//<Your Secret Key>
 
-#define GAME_NAME             @""//<Your Game Name>
+#define GAME_NAME             @"iOSLeaderBoard"//<Your Game Name>
 
 #define DB_NAME               @"ScoreDB"
 #define COLLECTION_NAME       @"ScoreCollection"
