@@ -100,7 +100,7 @@
 		1C7C8CAA18ED4337002A1C83 /* LDLeaderBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDLeaderBoard.m; sourceTree = "<group>"; };
 		1C7C8CAB18ED4337002A1C83 /* LDLeaderBoard_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDLeaderBoard_iPad.xib; sourceTree = "<group>"; };
 		1C7C8CAC18ED4337002A1C83 /* LDLeaderBoard_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDLeaderBoard_iPhone.xib; sourceTree = "<group>"; };
-		1C87AB1218D304B200012B10 /* LeaderBoardSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeaderBoardSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C87AB1218D304B200012B10 /* SpacePowerCombat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpacePowerCombat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C87AB1518D304B200012B10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1C87AB1718D304B200012B10 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1C87AB1918D304B200012B10 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -115,7 +115,7 @@
 		1C87AB2D18D304B200012B10 /* LDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDViewController.h; sourceTree = "<group>"; };
 		1C87AB2E18D304B200012B10 /* LDViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; name = LDViewController.m; path = LeaderBoardSample/LDViewController.m; sourceTree = SOURCE_ROOT; };
 		1C87AB3018D304B200012B10 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1C87AB3618D304B200012B10 /* LeaderBoardSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeaderBoardSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C87AB3618D304B200012B10 /* SpacePowerCombatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpacePowerCombatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C87AB3718D304B200012B10 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1C87AB3F18D304B200012B10 /* SpacePowerCombatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpacePowerCombatTests-Info.plist"; sourceTree = "<group>"; };
 		1C87AB4118D304B200012B10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -227,8 +227,8 @@
 		1C87AB1318D304B200012B10 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1C87AB1218D304B200012B10 /* LeaderBoardSample.app */,
-				1C87AB3618D304B200012B10 /* LeaderBoardSampleTests.xctest */,
+				1C87AB1218D304B200012B10 /* SpacePowerCombat.app */,
+				1C87AB3618D304B200012B10 /* SpacePowerCombatTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -370,7 +370,7 @@
 			);
 			name = SpacePowerCombat;
 			productName = LeaderBoardSample;
-			productReference = 1C87AB1218D304B200012B10 /* LeaderBoardSample.app */;
+			productReference = 1C87AB1218D304B200012B10 /* SpacePowerCombat.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1C87AB3518D304B200012B10 /* SpacePowerCombatTests */ = {
@@ -388,7 +388,7 @@
 			);
 			name = SpacePowerCombatTests;
 			productName = LeaderBoardSampleTests;
-			productReference = 1C87AB3618D304B200012B10 /* LeaderBoardSampleTests.xctest */;
+			productReference = 1C87AB3618D304B200012B10 /* SpacePowerCombatTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -569,7 +569,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -587,7 +587,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "122581E9-707A-4834-8272-4CD1748B314B";
+				PROVISIONING_PROFILE = "06DEF4BF-C436-4FF2-B427-4534287B6EC3";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -610,7 +610,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -621,7 +621,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "122581E9-707A-4834-8272-4CD1748B314B";
+				PROVISIONING_PROFILE = "06DEF4BF-C436-4FF2-B427-4534287B6EC3";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -647,7 +647,7 @@
 				GCC_PREFIX_HEADER = "LeaderBoardSample/SpacePowerCombat-Prefix.pch";
 				INFOPLIST_FILE = "LeaderBoardSample/SpacePowerCombat-Info.plist";
 				PRODUCT_NAME = SpacePowerCombat;
-				PROVISIONING_PROFILE = "122581E9-707A-4834-8272-4CD1748B314B";
+				PROVISIONING_PROFILE = "06DEF4BF-C436-4FF2-B427-4534287B6EC3";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -671,7 +671,7 @@
 				GCC_PREFIX_HEADER = "LeaderBoardSample/SpacePowerCombat-Prefix.pch";
 				INFOPLIST_FILE = "LeaderBoardSample/SpacePowerCombat-Info.plist";
 				PRODUCT_NAME = SpacePowerCombat;
-				PROVISIONING_PROFILE = "122581E9-707A-4834-8272-4CD1748B314B";
+				PROVISIONING_PROFILE = "06DEF4BF-C436-4FF2-B427-4534287B6EC3";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
