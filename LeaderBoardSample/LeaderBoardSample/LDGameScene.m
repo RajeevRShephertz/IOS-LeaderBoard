@@ -62,6 +62,7 @@ static inline CGPoint CGPointMultiply(const CGPoint a, const CGFloat b)
     
     return self;
 }
+
 - (void) addLifeLabel {
     lifeLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
     lifeLabel.fontSize = 20;
