@@ -27,14 +27,18 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb1491113821108835</string>
+				<string>&lt;Enter</string>
+				<string>Your</string>
+				<string>Fb</string>
+				<string>Key</string>
+				<string>here&gt;</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>FacebookAppID</key>
-	<string>1491113821108835</string>
+	<string>&lt;Enter Your Fb Key here&gt;</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
