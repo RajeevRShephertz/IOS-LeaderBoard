@@ -15,6 +15,7 @@
 		1C4B467A18E4032100F242F1 /* LDGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4B467918E4032100F242F1 /* LDGameScene.m */; };
 		1C4B467D18E4039200F242F1 /* LDGameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4B467C18E4039200F242F1 /* LDGameOverScene.m */; };
 		1C4B468418E403E900F242F1 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C4B467F18E403E900F242F1 /* bg.png */; };
+		1C57A30D190E6ED300553234 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AAA618D806C50090AD85 /* AdSupport.framework */; };
 		1C6A95AB18DAAB9500033018 /* Male_Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C6A95AA18DAAB9500033018 /* Male_Image.png */; };
 		1C6A95AC18DAB3F100033018 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5AA8E18D803F40090AD85 /* FacebookSDKResources.bundle */; };
 		1C6A95AF18DAF36200033018 /* Game_BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C6A95AE18DAF36200033018 /* Game_BG.png */; };
@@ -40,7 +41,6 @@
 		1CA5AA8C18D803CD0090AD85 /* PWFacebookHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5AA8B18D803CD0090AD85 /* PWFacebookHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1CA5AAA318D806B00090AD85 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AAA218D806B00090AD85 /* SystemConfiguration.framework */; };
 		1CA5AAA518D806BA0090AD85 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AAA418D806BA0090AD85 /* Accounts.framework */; };
-		1CA5AAA718D806C50090AD85 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AAA618D806C50090AD85 /* AdSupport.framework */; };
 		1CA5AAA918D806CE0090AD85 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AAA818D806CE0090AD85 /* libsqlite3.dylib */; };
 		1CA5AAAB18D806DD0090AD85 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AAAA18D806DD0090AD85 /* Social.framework */; };
 		1CA5FA7118D9BCFE00FF10A7 /* Leaderboard_BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5FA6D18D9BCFE00FF10A7 /* Leaderboard_BG.png */; };
@@ -167,13 +167,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C57A30D190E6ED300553234 /* AdSupport.framework in Frameworks */,
 				1C4B467718E401A700F242F1 /* SpriteKit.framework in Frameworks */,
 				1C3999A718E2E9C600D5F349 /* Shephertz_App42_iOS_API.framework in Frameworks */,
 				1C3999A418E2E9B400D5F349 /* FacebookSDK.framework in Frameworks */,
 				1C3999A518E2E9B400D5F349 /* FacebookSDKResources.bundle in Frameworks */,
 				1CA5AAAB18D806DD0090AD85 /* Social.framework in Frameworks */,
 				1CA5AAA918D806CE0090AD85 /* libsqlite3.dylib in Frameworks */,
-				1CA5AAA718D806C50090AD85 /* AdSupport.framework in Frameworks */,
 				1CA5AAA518D806BA0090AD85 /* Accounts.framework in Frameworks */,
 				1CA5AAA318D806B00090AD85 /* SystemConfiguration.framework in Frameworks */,
 				1C87AB1818D304B200012B10 /* CoreGraphics.framework in Frameworks */,

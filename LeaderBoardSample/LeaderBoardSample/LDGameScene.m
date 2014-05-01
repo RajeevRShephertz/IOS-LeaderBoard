@@ -31,7 +31,7 @@
 static const uint32_t shipCategory =  0x1 << 0;
 static const uint32_t obstacleCategory =  0x1 << 1;
 
-static const float BG_Velocity = 100.0;
+static const float BG_Velocity = 5.0;
 static const float Obj_velocity = 160.0;
 
 static inline CGPoint CGPointAdd(const CGPoint a, const CGPoint b)
@@ -132,14 +132,9 @@ static inline CGPoint CGPointMultiply(const CGPoint a, const CGFloat b)
     UITouch *touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInNode:self.scene];
     if(touchLocation.y >ship.position.y){
-        if(ship.position.y < 270){
-            [ship runAction:actionMoveUp];
-        }
+        [ship runAction:actionMoveUp];
     }else{
-        if(ship.position.y > 50){
-            
-            [ship runAction:actionMoveDown];
-        }
+        [ship runAction:actionMoveDown];
     }
 }
 
@@ -147,12 +142,12 @@ static inline CGPoint CGPointMultiply(const CGPoint a, const CGFloat b)
 {
     for (int i = 0; i < 2; i++) {
         SKSpriteNode *bg = [SKSpriteNode spriteNodeWithImageNamed:@"bg"];
+        [bg setSize:CGSizeMake(bg.size.width, self.frame.size.height)];
         bg.position = CGPointMake(i * bg.size.width, 0);
         bg.anchorPoint = CGPointZero;
         bg.name = @"bg";
         [self addChild:bg];
     }
-    
 }
 
 - (void)moveBg
@@ -161,7 +156,7 @@ static inline CGPoint CGPointMultiply(const CGPoint a, const CGFloat b)
      {
          if (![node isEqual:lifeLabel]) {
              SKSpriteNode * bg = (SKSpriteNode *) node;
-             CGPoint bgVelocity = CGPointMake(-BG_Velocity, 0);
+             CGPoint bgVelocity = CGPointMake(-BG_Velocity*bg.size.width/100, 0);
              CGPoint amtToMove = CGPointMultiply(bgVelocity,_dt);
              bg.position = CGPointAdd(bg.position, amtToMove);
              
