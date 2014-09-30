@@ -163,7 +163,8 @@ extern NSString *const OTHER;
  * @return Upload object
  *
  */
--(Upload*)getFileByUser:(NSString*)name userName:(NSString*)userName;
+-(Upload*)getFileByUser:(NSString*)fileName userName:(NSString*)userName;
+
 /**
  * Gets the count of file based on user name.
  *

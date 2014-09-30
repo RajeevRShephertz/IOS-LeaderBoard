@@ -206,6 +206,7 @@
 -(void)fbDidNotLogin:(BOOL)cancelled {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Error:" message: @"Facebook Login Failed!" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
+    [self removeAcitvityIndicator];
 }
 
 -(void)userDidLoggedIn {

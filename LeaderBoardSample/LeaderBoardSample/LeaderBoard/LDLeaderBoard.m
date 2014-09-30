@@ -182,7 +182,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     int numberOfRows =0;
     if (scoreList) {
-        numberOfRows =[scoreList count];
+        numberOfRows =(int)[scoreList count];
     }
 	return numberOfRows;
 }
@@ -247,12 +247,17 @@
     
     Score *l_score = [scoreList objectAtIndex:indexPath.row];
     NSArray *metaArray = [l_score jsonDocArray];
-    NSString *jsonString = [(JSONDocument *)[metaArray objectAtIndex:0] jsonDoc];
-    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableLeaves error:nil];
-    [self loadProfileImageForId:[jsonDict objectForKey:@"UserID"] onImageView:(UIImageView *)[cell viewWithTag:1]];
-    [(UILabel *)[cell viewWithTag:2] setText:[jsonDict objectForKey:@"Name"]];
-    [(UILabel *)[cell viewWithTag:3] setText:[NSString stringWithFormat:@"%d",indexPath.row+1]];
-    [(UILabel *)[cell viewWithTag:4] setText:[NSString stringWithFormat:@"%0.0f",[[jsonDict objectForKey:@"Score"] floatValue]]];
+    NSLog(@"metaArray=%@",metaArray);
+    if (metaArray.count)
+    {
+        NSString *jsonString = [(JSONDocument *)[metaArray objectAtIndex:0] jsonDoc];
+        NSLog(@"jsonString=%@",jsonString);
+        NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableLeaves error:nil];
+        [self loadProfileImageForId:[jsonDict objectForKey:@"UserID"] onImageView:(UIImageView *)[cell viewWithTag:1]];
+        [(UILabel *)[cell viewWithTag:2] setText:[jsonDict objectForKey:@"Name"]];
+        [(UILabel *)[cell viewWithTag:3] setText:[NSString stringWithFormat:@"%ld",indexPath.row+1]];
+        [(UILabel *)[cell viewWithTag:4] setText:[NSString stringWithFormat:@"%0.0f",[[jsonDict objectForKey:@"Score"] floatValue]]];
+    }
     
     UIView *bgview = (UIView *)[cell viewWithTag:5];
     if (indexPath.row%2==0) {
@@ -260,6 +265,7 @@
     } else {
         bgview.backgroundColor = [UIColor colorWithRed:183.0f/255.0f green:106.0f/255.0f blue:15.0f/255.0f alpha:1.0f];
     }
+   
     return cell;
 }
 

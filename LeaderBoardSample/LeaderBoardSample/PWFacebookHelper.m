@@ -172,7 +172,7 @@ static PWFacebookHelper *fbHelper;
         {
              if (!error)
              {//facebookUserInfo
-                 self.userId = [NSString stringWithFormat:@"%@",user.id];
+                 self.userId = [NSString stringWithFormat:@"%@",user.objectID];
                  [[NSUserDefaults standardUserDefaults] setObject:user.first_name forKey:@"userName"];
                  [[NSUserDefaults standardUserDefaults] setObject:userId forKey:@"userId"];
                  self.userName = user.first_name;
@@ -324,174 +324,12 @@ static PWFacebookHelper *fbHelper;
 
 
 
--(void)shareSnapshot:(UIImage*)snapShot
-{
-    
-    
-    if ([FBSession.activeSession.permissions indexOfObject:@"publish_actions"] == NSNotFound)
-    {
-        
-        [FBSession.activeSession requestNewPublishPermissions:[NSArray arrayWithObject:@"publish_actions"]
-                                              defaultAudience:FBSessionDefaultAudienceFriends
-         completionHandler:^(FBSession *session, NSError *error)
-         {
-             if (!error)
-             {
-                 // re-call assuming we now have the permission
-                 [self shareSnapshot:snapShot];
-             }
-         }];
-    }
-    else
-    {
-        [[FBRequest requestForUploadPhoto:snapShot] startWithCompletionHandler:
-         ^(FBRequestConnection *connection,
-           NSDictionary<FBGraphUser> *friends,
-           NSError *error)
-         {
-             if (!error)
-             {
-                 
-                 if( self.delegate && [self.delegate respondsToSelector:@selector(snapshotSharedToTheWall)])
-                 {
-                     [delegate snapshotSharedToTheWall];
-                 }
-                 
-             }
-             NSLog(@"error=%@",[error description]);
-         }];
-    }
-}
 
 
 
 
-//username: shyamchetan@yahoo.com
-// password : planet
-
--(void)getFriendsPlayingThisGame
-{
-    
-        // Query to fetch the active user's friends, limit to 25.
-        NSString *query = @"SELECT uid, name, is_app_user FROM user WHERE uid IN (SELECT uid2 FROM friend WHERE uid1=me()) AND is_app_user=1";
-    
-        // Set up the query parameter
-        NSDictionary *queryParam =[NSDictionary dictionaryWithObjectsAndKeys:query, @"q", nil];
-    
-        // Make the API request that uses FQL
-        [FBRequestConnection startWithGraphPath:@"/fql"
-                                     parameters:queryParam
-                                     HTTPMethod:@"GET"
-                              completionHandler:^(FBRequestConnection *connection,
-                                                  id result,
-                                                  NSError *error)
-                                {
-                                  if (error)
-                                  {
-                                      NSLog(@"Error: %@", [error localizedDescription]);
-                                      NSLog(@"error=%@",[error description]);
-                                  }
-                                  else
-                                  {
-                                      NSLog(@"Result: %@", result);
-                                      // Get the friend data to display
-                                      NSArray *friendInfo = (NSArray *) [result objectForKey:@"data"];
-                                      if( self.delegate && [self.delegate respondsToSelector:@selector(friendListRetrieved:)])
-                                      {
-                                          [self.delegate friendListRetrieved:friendInfo];
-                                      }
-                                  }
-                              }];
-    
-    //SELECT uid2 FROM friend WHERE uid1 = me() AND uid2 = {YOUR_FRIEND2_ID}
-}
-
--(void)getFriendsNotPlayingThisGame
-{
-    
-    // Query to fetch the active user's friends, limit to 25.
-    NSString *query = @"SELECT uid, name, is_app_user FROM user WHERE uid IN (SELECT uid2 FROM friend WHERE uid1=me()) AND is_app_user=0";
-    
-    // Set up the query parameter
-    NSDictionary *queryParam =[NSDictionary dictionaryWithObjectsAndKeys:query, @"q", nil];
-    
-    // Make the API request that uses FQL
-    [FBRequestConnection startWithGraphPath:@"/fql"
-                                 parameters:queryParam
-                                 HTTPMethod:@"GET"
-                          completionHandler:^(FBRequestConnection *connection,
-                                              id result,
-                                              NSError *error)
-     {
-         if (error)
-         {
-             NSLog(@"Error: %@", [error localizedDescription]);
-             NSLog(@"error=%@",[error description]);
-         }
-         else
-         {
-             NSLog(@"Result: %@", result);
-             // Get the friend data to display
-             NSArray *friendInfo = (NSArray *) [result objectForKey:@"data"];
-             if( self.delegate && [self.delegate respondsToSelector:@selector(friendListRetrieved:)])
-             {
-                 [self.delegate friendListRetrieved:friendInfo];
-             }
-         }
-     }];
-    
-    //SELECT uid2 FROM friend WHERE uid1 = me() AND uid2 = {YOUR_FRIEND2_ID}
-}
 
 
-/*
--(void)getRelationShipWithPlayerTwo
-{
-    // Query to fetch the active user's friends, limit to 25.
-    NSString *query = [NSString stringWithFormat:@"SELECT uid2 FROM friend WHERE uid1 = me() AND uid2 = %@",[[[PWGameController sharedInstance] dataManager] player2]];
- 
-    // Set up the query parameter
-    NSDictionary *queryParam =[NSDictionary dictionaryWithObjectsAndKeys:query, @"q", nil];
-
-    // Make the API request that uses FQL
-    [FBRequestConnection startWithGraphPath:@"/fql"
-                                 parameters:queryParam
-                                 HTTPMethod:@"GET"
-                          completionHandler:^(FBRequestConnection *connection,
-                                              id result,
-                                              NSError *error)
-     {
-         if (error)
-         {
-             NSLog(@"Error: %@", [error localizedDescription]);
-             NSLog(@"error=%@",[error description]);
-         }
-         else
-         {
-             NSLog(@"Result: %@", result);
-             // Get the friend data to display
-             NSArray *friendInfo = (NSArray *) [result objectForKey:@"data"];
-             BOOL isFriend;
-             if ([friendInfo count])
-             {
-                 isFriend = YES;
-             }
-             else
-             {
-                 isFriend = NO;
-             }
-             if( self.delegate && [self.delegate respondsToSelector:@selector(relationShipRetrieved:)])
-             {
-                 [self.delegate relationShipRetrieved:isFriend];
-                 
-             }
-             
-         }
-     }];
-
-}
-
-*/
 
 
 
@@ -516,7 +354,7 @@ static PWFacebookHelper *fbHelper;
                 {
                      if (!error)
                      {
-                         self.userId = user.id;
+                         self.userId = user.objectID;
                          self.loggedInSession = FBSession.activeSession;
                      }
                  }];

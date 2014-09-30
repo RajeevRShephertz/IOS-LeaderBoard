@@ -340,6 +340,28 @@ extern NSString *const FEMALE;
  */
 -(App42Response*)logout:(NSString*) sessionId;
 
+/**
+ *
+ * @param uName
+ * @param pwd
+ * @param emailAddress
+ * @param profile
+ * @return
+ * @throws App42Exception
+ */
+-(User*)createUserWithProfile:(NSString*)userName
+                     password:(NSString*)password
+                 emailAddress:(NSString*) emailAddress
+                      profile:(Profile*) profile;
 
--(void)addUserInfo:(NSDictionary*)userInfo dbName:(NSString*)dbName collectionName:(NSString*) collectionName;
+/**
+ *
+ * @param users : Array of userNames for which details need to be retrieved
+ * @return
+ * @throws App42Exception
+ */
+-(NSArray*)getUsersByGroup:(NSArray*)users;
+
+
+-(void)addUserInfo:(NSDictionary*)userInfo collectionName:(NSString*) collectionName;
 @end

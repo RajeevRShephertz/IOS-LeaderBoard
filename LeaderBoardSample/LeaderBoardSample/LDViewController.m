@@ -44,13 +44,13 @@
 
 #pragma mark - IBActions Methods
 - (IBAction)playAction:(id)sender {
-    CGRect _frame  =CGRectMake(0, 0, self.view.frame.size.height, self.view.frame.size.width);
+    CGRect _frame  =CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     SKView * skView = [[SKView alloc] initWithFrame:_frame];
 
     if (!skView.scene) {
         skView.showsFPS = NO;
         skView.showsNodeCount = NO;
-        
+        //NSLog(@"skview=%@",NSStringFromCGSize(skView.bounds.size));
         // Create and configure the scene.
         SKScene * scene = [LDGameScene sceneWithSize:skView.bounds.size];
         scene.scaleMode = SKSceneScaleModeAspectFill;

@@ -216,7 +216,7 @@ extern NSString *const DEVELOPMENT;
 - (PushNotification *)scheduleMessageToUser:(NSString*)userName expiryDate:(NSDate*)expiryDate message:(NSString *)message;
 
 /**
- * Unsubscribe your device form push-notification service.
+ * Delete your device from push-notification service.
  *
  * @param userName
  *            - Name of user whose device token has to delete.
@@ -225,6 +225,64 @@ extern NSString *const DEVELOPMENT;
  * @return App42Response Object
  * @throws App42Exception
  */
+
 -(App42Response*)deleteDeviceToken:(NSString*)userName  deviceToken:(NSString*) deviceToken;
+
+/**
+ * Delete all devices registered for single user in push-notification service.
+ *
+ * @param userName
+ *            - Name of user whose devices has to delete.
+ * @return App42Response Object
+ * @throws App42Exception
+ */
+-(App42Response*)deleteAllDevices:(NSString*)userName;
+
+/**
+ * Unsubscribe your device from push-notification service.
+ * @param userName
+ * @param deviceToken
+ * @return
+ * @throws App42Exception
+ */
+-(PushNotification*)unsubscribeDeviceForUser:(NSString *)userName deviceToken:(NSString*)deviceToken;
+
+/**
+ * Resubscribe your device for push-notification service.
+ * @param userName
+ * @param deviceToken
+ * @return
+ * @throws App42Exception
+ */
+-(PushNotification*)resubscribeDeviceForUser:(NSString *)userName deviceToken:(NSString*)deviceToken;
+
+/**
+ * Send push to device with matching deviceToken and userName.
+ * @param userName
+ * @param deviceToken
+ * @return
+ * @throws App42Exception
+ */
+- (PushNotification *)sendPushMessageToDevice:(NSString *)deviceToken userName:(NSString*)userName message:(NSString *)message;
+
+/**
+ *
+ * @param userName
+ * @param deviceToken
+ * @param increment
+ * @return
+ * @throws App42Exception
+ */
+- (PushNotification *)updatePushBadgeforDevice:(NSString *)deviceToken userName:(NSString*)userName badges:(int)badges;
+
+/**
+ *
+ * @param userName
+ * @param increment
+ * @return
+ * @throws App42Exception
+ */
+- (PushNotification *)updatePushBadgeforUser:(NSString*)userName badges:(int)badges;
+
 
 @end

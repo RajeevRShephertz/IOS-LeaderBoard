@@ -179,4 +179,12 @@
  */
 -(App42Response*)deleteCommentByCommentId:(NSString*)commentId;
 
+/**
+ *
+ * @param userId
+ * @return
+ * @throws App42Exception
+ */
+-(NSArray*)getAllReviewsByUser:(NSString*)userId;
+
 @end

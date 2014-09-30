@@ -298,6 +298,15 @@
  */
 -(Game*)getTopNTargetRankers:(NSString*)gameName max:(int) max;
 
+/**
+ *
+ * @param gameName
+ * @param minScore
+ * @param maxScore
+ * @return Game object
+ * @throws App42Exception
+ */
+-(Game*)getUsersWithScoreRange:(NSString*)gameName minScore:(double) minScore maxScore:(double)maxScore;
 
 -(void)addCustomScore:(NSDictionary*)scoreDict collectionName:(NSString*) collectionName;
 @end

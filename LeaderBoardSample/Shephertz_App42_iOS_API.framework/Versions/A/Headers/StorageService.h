@@ -39,7 +39,7 @@
 -(id)initWithAPIKey:(NSString *)apiKey  secretKey:(NSString *)secretKey;
 
 /**
- * Save the JSON document in given database name and collection name.
+ * Save the JSON String in given database name and collection name.
  *
  * @param dbName
  *            - Unique handler for storage name
@@ -72,20 +72,35 @@
 -(Storage*)insertJSONDocument:(NSString*)dbName collectionName:(NSString*)collectionName dataDict:(NSDictionary*)dataDict;
 
 /**
- * Save the data supplied as Dictionary in the given database name and collection name.
+ * Save the data supplied as JSON String with an attachment file in the given database name and collection name.
  *
  * @param dbName
  *            - Unique handler for storage name
  * @param collectionName
  *            - Name of collection under which JSON doc has to be saved
- * @param dataDict
- *            - Target data as Dictionary to be saved
+ * @param json
+ *            - Target JSON document to be saved
  *
  * @return Storage object
  *
  *
  */
 -(Storage*)insertJSONDocument:(NSString*)dbName collectionName:(NSString*)collectionName json:(NSString*)json attachment:(App42File*)file;
+
+/**
+ * Save the data supplied as Dictionary with an attachment file in the given database name and collection name.
+ *
+ * @param dbName
+ *            - Unique handler for storage name
+ * @param collectionName
+ *            - Name of collection under which JSON doc has to be saved
+ * @param json
+ *            - Target JSON document to be saved
+ *
+ * @return Storage object
+ *
+ */
+-(Storage*)insertJSONDocument:(NSString*)dbName collectionName:(NSString*)collectionName dataDict:(NSDictionary*)dataDict attachment:(App42File*)file;
 
 /**
  * Find all documents stored in given database and collection.
@@ -96,7 +111,6 @@
  *            - Name of collection under which JSON doc needs to be searched
  *
  * @return Storage object
- *
  *
  */
 -(Storage*)findAllDocuments:(NSString*)dbName collectionName:(NSString*)collectionName;
@@ -394,6 +408,8 @@
                   andAclList:(NSArray*) aclList;
 
 -(App42Response*) deleteAllDocuments:(NSString*)dbName collectionName:(NSString*) collectionName;
+
+
 -(Storage*)findDocumentsByLocation:(NSString*)dbName collectionName:(NSString*)collectionName geoQuery:(GeoQuery*)query;
 /**
  * Delete target document using key and value from given db and collection.
@@ -511,4 +527,27 @@
 
 -(Storage*)addAttachmentToDocs:(NSString*)dbName collectionName:(NSString*)collectionName docId:(NSString*)docId attachment:(App42File*)file;
 
+/**
+ *
+ * @param dbName
+ * @param collectionName
+ * @param query
+ * @param newJsonDoc
+ * @return
+ * @throws App42Exception
+ */
+-(Storage*)updateDocumentByQuery:(NSString*)dbName collectionName:(NSString*)collectionName query:(Query*)query newJsonDoc:(NSString*)newJsonDoc;
+
+/**
+ *
+ * @param dbName
+ * @param collectionName
+ * @param query
+ * @param newDataDict
+ * @return
+ * @throws App42Exception
+ */
+-(Storage*)updateDocumentByQuery:(NSString*)dbName collectionName:(NSString*)collectionName query:(Query*)query newDataDict:(NSDictionary*)newDataDict;
+
+-(App42Response*)findDocumentsByQueryCount:(NSString*)dbName collectionName:(NSString*)collectionName query:(Query*)query;
 @end

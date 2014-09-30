@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C3999A418E2E9B400D5F349 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AA8D18D803F40090AD85 /* FacebookSDK.framework */; };
 		1C3999A518E2E9B400D5F349 /* FacebookSDKResources.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AA8E18D803F40090AD85 /* FacebookSDKResources.bundle */; };
-		1C3999A718E2E9C600D5F349 /* Shephertz_App42_iOS_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA5AA8718D803680090AD85 /* Shephertz_App42_iOS_API.framework */; };
 		1C3DD16A18E9661100161BA7 /* Play_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C3DD16918E9661100161BA7 /* Play_Button.png */; };
 		1C4B467718E401A700F242F1 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4B467618E401A700F242F1 /* SpriteKit.framework */; };
 		1C4B467A18E4032100F242F1 /* LDGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4B467918E4032100F242F1 /* LDGameScene.m */; };
@@ -72,6 +70,10 @@
 		1CE860C41904F09A00742E81 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CE860AF1904F09A00742E81 /* Icon@2x.png */; };
 		1CE86110190519A200742E81 /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CE8610F190519A200742E81 /* Default-568h.png */; };
 		1CFB631918EE8D9700597048 /* Login_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CFB631818EE8D9700597048 /* Login_facebook.png */; };
+		8445F5F819DAB36C00171B3B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8445F5F719DAB36C00171B3B /* StoreKit.framework */; };
+		8445F5FA19DABC3A00171B3B /* AppHype_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8445F5F919DABC3A00171B3B /* AppHype_iOS_SDK.framework */; };
+		84E289781952B64000486422 /* Shephertz_App42_iOS_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E289771952B64000486422 /* Shephertz_App42_iOS_API.framework */; };
+		84E2897A1952B67C00486422 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E289791952B67C00486422 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,10 +123,8 @@
 		1C87AB3F18D304B200012B10 /* SpacePowerCombatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpacePowerCombatTests-Info.plist"; sourceTree = "<group>"; };
 		1C87AB4118D304B200012B10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1C87AB4318D304B200012B10 /* LeaderBoardSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardSampleTests.m; sourceTree = "<group>"; };
-		1CA5AA8718D803680090AD85 /* Shephertz_App42_iOS_API.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Shephertz_App42_iOS_API.framework; sourceTree = "<group>"; };
 		1CA5AA8A18D803CD0090AD85 /* PWFacebookHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWFacebookHelper.h; sourceTree = "<group>"; };
 		1CA5AA8B18D803CD0090AD85 /* PWFacebookHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWFacebookHelper.m; sourceTree = "<group>"; };
-		1CA5AA8D18D803F40090AD85 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = LeaderBoardSample/FacebookSDK.framework; sourceTree = "<group>"; };
 		1CA5AA8E18D803F40090AD85 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = LeaderBoardSample/FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		1CA5AAA218D806B00090AD85 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1CA5AAA418D806BA0090AD85 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -160,6 +160,10 @@
 		1CE860AF1904F09A00742E81 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		1CE8610F190519A200742E81 /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
 		1CFB631818EE8D9700597048 /* Login_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login_facebook.png; sourceTree = "<group>"; };
+		8445F5F719DAB36C00171B3B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8445F5F919DABC3A00171B3B /* AppHype_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppHype_iOS_SDK.framework; sourceTree = "<group>"; };
+		84E289771952B64000486422 /* Shephertz_App42_iOS_API.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Shephertz_App42_iOS_API.framework; sourceTree = "<group>"; };
+		84E289791952B67C00486422 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,15 +173,17 @@
 			files = (
 				1C57A30D190E6ED300553234 /* AdSupport.framework in Frameworks */,
 				1C4B467718E401A700F242F1 /* SpriteKit.framework in Frameworks */,
-				1C3999A718E2E9C600D5F349 /* Shephertz_App42_iOS_API.framework in Frameworks */,
-				1C3999A418E2E9B400D5F349 /* FacebookSDK.framework in Frameworks */,
 				1C3999A518E2E9B400D5F349 /* FacebookSDKResources.bundle in Frameworks */,
 				1CA5AAAB18D806DD0090AD85 /* Social.framework in Frameworks */,
 				1CA5AAA918D806CE0090AD85 /* libsqlite3.dylib in Frameworks */,
+				84E2897A1952B67C00486422 /* FacebookSDK.framework in Frameworks */,
 				1CA5AAA518D806BA0090AD85 /* Accounts.framework in Frameworks */,
+				8445F5FA19DABC3A00171B3B /* AppHype_iOS_SDK.framework in Frameworks */,
 				1CA5AAA318D806B00090AD85 /* SystemConfiguration.framework in Frameworks */,
 				1C87AB1818D304B200012B10 /* CoreGraphics.framework in Frameworks */,
+				84E289781952B64000486422 /* Shephertz_App42_iOS_API.framework in Frameworks */,
 				1C87AB1A18D304B200012B10 /* UIKit.framework in Frameworks */,
+				8445F5F819DAB36C00171B3B /* StoreKit.framework in Frameworks */,
 				1C87AB1618D304B200012B10 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,15 +244,17 @@
 		1C87AB1418D304B200012B10 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8445F5F919DABC3A00171B3B /* AppHype_iOS_SDK.framework */,
+				8445F5F719DAB36C00171B3B /* StoreKit.framework */,
+				84E289791952B67C00486422 /* FacebookSDK.framework */,
+				84E289771952B64000486422 /* Shephertz_App42_iOS_API.framework */,
 				1C4B467618E401A700F242F1 /* SpriteKit.framework */,
 				1CA5AAAA18D806DD0090AD85 /* Social.framework */,
 				1CA5AAA818D806CE0090AD85 /* libsqlite3.dylib */,
 				1CA5AAA618D806C50090AD85 /* AdSupport.framework */,
 				1CA5AAA418D806BA0090AD85 /* Accounts.framework */,
 				1CA5AAA218D806B00090AD85 /* SystemConfiguration.framework */,
-				1CA5AA8D18D803F40090AD85 /* FacebookSDK.framework */,
 				1CA5AA8E18D803F40090AD85 /* FacebookSDKResources.bundle */,
-				1CA5AA8718D803680090AD85 /* Shephertz_App42_iOS_API.framework */,
 				1C87AB1518D304B200012B10 /* Foundation.framework */,
 				1C87AB1718D304B200012B10 /* CoreGraphics.framework */,
 				1C87AB1918D304B200012B10 /* UIKit.framework */,
@@ -404,6 +412,14 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Shephertz;
 				TargetAttributes = {
+					1C87AB1118D304B200012B10 = {
+						DevelopmentTeam = 93TF9ZT92J;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
+					};
 					1C87AB3518D304B200012B10 = {
 						TestTargetID = 1C87AB1118D304B200012B10;
 					};
@@ -573,6 +589,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -589,9 +606,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "06DEF4BF-C436-4FF2-B427-4534287B6EC3";
+				PROVISIONING_PROFILE = "e59bd600-c4cc-4791-9851-094e9d92a9f6";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -614,6 +631,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -624,8 +642,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "06DEF4BF-C436-4FF2-B427-4534287B6EC3";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PROVISIONING_PROFILE = "e59bd600-c4cc-4791-9851-094e9d92a9f6";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -639,19 +657,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/siddharthachandurkar/Desktop/LeaderBoardSample,
-					/Users/siddharthachandurkar/Desktop/LeaderBoardSample/LeaderBoardSample,
-					"/Users/siddharthachandurkar/Desktop/NitinGShephertz/IOS-LeaderBoard/LeaderBoardSample/LeaderBoardSample",
-					"/Users/siddharthachandurkar/Desktop/NitinGShephertz/IOS-LeaderBoard/LeaderBoardSample",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LeaderBoardSample/SpacePowerCombat-Prefix.pch";
 				INFOPLIST_FILE = "LeaderBoardSample/SpacePowerCombat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = SpacePowerCombat;
-				PROVISIONING_PROFILE = "06DEF4BF-C436-4FF2-B427-4534287B6EC3";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -663,19 +680,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/siddharthachandurkar/Desktop/LeaderBoardSample,
-					/Users/siddharthachandurkar/Desktop/LeaderBoardSample/LeaderBoardSample,
-					"/Users/siddharthachandurkar/Desktop/NitinGShephertz/IOS-LeaderBoard/LeaderBoardSample/LeaderBoardSample",
-					"/Users/siddharthachandurkar/Desktop/NitinGShephertz/IOS-LeaderBoard/LeaderBoardSample",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LeaderBoardSample/SpacePowerCombat-Prefix.pch";
 				INFOPLIST_FILE = "LeaderBoardSample/SpacePowerCombat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = SpacePowerCombat;
-				PROVISIONING_PROFILE = "06DEF4BF-C436-4FF2-B427-4534287B6EC3";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -32,7 +32,7 @@
 /*!
  *set and get the name of the database.
  */
-@property(nonatomic,retain) NSString *recordCount;
+@property(nonatomic,assign) int recordCount;
 
 
 /*!

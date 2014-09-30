@@ -27,18 +27,16 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>&lt;Enter</string>
-				<string>Your</string>
-				<string>Fb</string>
-				<string>Key</string>
-				<string>here&gt;</string>
+				<string>fb276790739176083</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>FacebookAppID</key>
-	<string>&lt;Enter Your Fb Key here&gt;</string>
+	<string>276790739176083</string>
+	<key>FacebookDisplayName</key>
+	<string>SpacePowerCombat</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
@@ -53,7 +51,6 @@
 	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
-		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
