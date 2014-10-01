@@ -8,6 +8,7 @@
 
 #import "LDLeaderBoard.h"
 #import "App42Helper.h"
+#import "AppHypeHelper.h"
 
 @implementation LDLeaderBoard
 
@@ -47,6 +48,16 @@
     leaderboardTableView.delegate   = self;
     colorChanger = 1;
     [self showAcitvityIndicator];
+    
+    AppHypeHelper *appHypeHelper = [AppHypeHelper sharedAppHypeHelper] ;
+    if (([appHypeHelper adcounter]==1)&&[appHypeHelper isAdAvailable:kInterstitial])
+    {
+        [appHypeHelper showInterstitialAd];
+    }
+    else if (([appHypeHelper adcounter]==2)&&[appHypeHelper isAdAvailable:kVideo])
+    {
+        [appHypeHelper showVideoAd];
+    }
     
     [self globalButtonClicked:nil];
     if (IS_IPHONE5) {

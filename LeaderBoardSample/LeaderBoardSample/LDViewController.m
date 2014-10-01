@@ -10,6 +10,7 @@
 #import "App42Helper.h"
 #import "LDLeaderBoard.h"
 #import "LDGameScene.h"
+#import "AppHypeHelper.h"
 
 @interface LDViewController ()
 
@@ -22,9 +23,17 @@
     [super viewDidLoad];
     
     [_leaderBoardButton setHidden:YES];
-    
     [[App42Helper sharedApp42Helper] initializeApp42];
     
+    AppHypeHelper *appHypeHelper = [AppHypeHelper sharedAppHypeHelper] ;
+    if (([appHypeHelper adcounter]==1)&&[appHypeHelper isAdAvailable:kInterstitial])
+    {
+        [appHypeHelper showInterstitialAd];
+    }
+    else if (([appHypeHelper adcounter]==2)&&[appHypeHelper isAdAvailable:kVideo])
+    {
+       [appHypeHelper showVideoAd];
+    }
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

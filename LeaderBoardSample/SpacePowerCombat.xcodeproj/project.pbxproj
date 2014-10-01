@@ -70,8 +70,11 @@
 		1CE860C41904F09A00742E81 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CE860AF1904F09A00742E81 /* Icon@2x.png */; };
 		1CE86110190519A200742E81 /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CE8610F190519A200742E81 /* Default-568h.png */; };
 		1CFB631918EE8D9700597048 /* Login_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CFB631818EE8D9700597048 /* Login_facebook.png */; };
+		842AA16119DBD3F000EF4823 /* AppHypeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 842AA16019DBD3F000EF4823 /* AppHypeHelper.m */; };
+		842AA17219DC0F3800EF4823 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842AA17119DC0F3800EF4823 /* AVFoundation.framework */; };
+		842AA17419DC0F4400EF4823 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842AA17319DC0F4400EF4823 /* CoreMedia.framework */; };
+		842AA17F19DC182700EF4823 /* AppHype_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842AA17E19DC182700EF4823 /* AppHype_iOS_SDK.framework */; };
 		8445F5F819DAB36C00171B3B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8445F5F719DAB36C00171B3B /* StoreKit.framework */; };
-		8445F5FA19DABC3A00171B3B /* AppHype_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8445F5F919DABC3A00171B3B /* AppHype_iOS_SDK.framework */; };
 		84E289781952B64000486422 /* Shephertz_App42_iOS_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E289771952B64000486422 /* Shephertz_App42_iOS_API.framework */; };
 		84E2897A1952B67C00486422 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E289791952B67C00486422 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
@@ -160,8 +163,12 @@
 		1CE860AF1904F09A00742E81 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		1CE8610F190519A200742E81 /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
 		1CFB631818EE8D9700597048 /* Login_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login_facebook.png; sourceTree = "<group>"; };
+		842AA15F19DBD3F000EF4823 /* AppHypeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppHypeHelper.h; sourceTree = "<group>"; };
+		842AA16019DBD3F000EF4823 /* AppHypeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppHypeHelper.m; sourceTree = "<group>"; };
+		842AA17119DC0F3800EF4823 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		842AA17319DC0F4400EF4823 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		842AA17E19DC182700EF4823 /* AppHype_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppHype_iOS_SDK.framework; sourceTree = "<group>"; };
 		8445F5F719DAB36C00171B3B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		8445F5F919DABC3A00171B3B /* AppHype_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppHype_iOS_SDK.framework; sourceTree = "<group>"; };
 		84E289771952B64000486422 /* Shephertz_App42_iOS_API.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Shephertz_App42_iOS_API.framework; sourceTree = "<group>"; };
 		84E289791952B67C00486422 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,14 +178,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842AA17419DC0F4400EF4823 /* CoreMedia.framework in Frameworks */,
+				842AA17219DC0F3800EF4823 /* AVFoundation.framework in Frameworks */,
 				1C57A30D190E6ED300553234 /* AdSupport.framework in Frameworks */,
 				1C4B467718E401A700F242F1 /* SpriteKit.framework in Frameworks */,
 				1C3999A518E2E9B400D5F349 /* FacebookSDKResources.bundle in Frameworks */,
 				1CA5AAAB18D806DD0090AD85 /* Social.framework in Frameworks */,
 				1CA5AAA918D806CE0090AD85 /* libsqlite3.dylib in Frameworks */,
+				842AA17F19DC182700EF4823 /* AppHype_iOS_SDK.framework in Frameworks */,
 				84E2897A1952B67C00486422 /* FacebookSDK.framework in Frameworks */,
 				1CA5AAA518D806BA0090AD85 /* Accounts.framework in Frameworks */,
-				8445F5FA19DABC3A00171B3B /* AppHype_iOS_SDK.framework in Frameworks */,
 				1CA5AAA318D806B00090AD85 /* SystemConfiguration.framework in Frameworks */,
 				1C87AB1818D304B200012B10 /* CoreGraphics.framework in Frameworks */,
 				84E289781952B64000486422 /* Shephertz_App42_iOS_API.framework in Frameworks */,
@@ -206,6 +215,8 @@
 			children = (
 				1C7C8CA518ED4337002A1C83 /* App42Helper.h */,
 				1C7C8CA618ED4337002A1C83 /* App42Helper.m */,
+				842AA15F19DBD3F000EF4823 /* AppHypeHelper.h */,
+				842AA16019DBD3F000EF4823 /* AppHypeHelper.m */,
 			);
 			path = App42Helper;
 			sourceTree = "<group>";
@@ -244,7 +255,9 @@
 		1C87AB1418D304B200012B10 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8445F5F919DABC3A00171B3B /* AppHype_iOS_SDK.framework */,
+				842AA17E19DC182700EF4823 /* AppHype_iOS_SDK.framework */,
+				842AA17319DC0F4400EF4823 /* CoreMedia.framework */,
+				842AA17119DC0F3800EF4823 /* AVFoundation.framework */,
 				8445F5F719DAB36C00171B3B /* StoreKit.framework */,
 				84E289791952B67C00486422 /* FacebookSDK.framework */,
 				84E289771952B64000486422 /* Shephertz_App42_iOS_API.framework */,
@@ -513,6 +526,7 @@
 				1C4B467A18E4032100F242F1 /* LDGameScene.m in Sources */,
 				1C87AB2218D304B200012B10 /* main.m in Sources */,
 				1CA5AA8C18D803CD0090AD85 /* PWFacebookHelper.m in Sources */,
+				842AA16119DBD3F000EF4823 /* AppHypeHelper.m in Sources */,
 				1C87AB2F18D304B200012B10 /* LDViewController.m in Sources */,
 				1C7C8CAE18ED4337002A1C83 /* LDLeaderBoard.m in Sources */,
 			);
@@ -662,6 +676,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/Admin/Desktop,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LeaderBoardSample/SpacePowerCombat-Prefix.pch";
@@ -685,6 +700,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/Admin/Desktop,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LeaderBoardSample/SpacePowerCombat-Prefix.pch";

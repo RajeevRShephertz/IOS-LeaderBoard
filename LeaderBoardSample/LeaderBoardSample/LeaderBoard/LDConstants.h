@@ -25,4 +25,4 @@
 #define  FACEBOOKPROFILEIMAGES_FOLDER_PATH	[NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches/FacebookProfileImages"]
 #define FACEBOOK_REFRESHED_DATE   @"facebookPicsLastRefreshedOn"
 
-
+#define APPHYPE_COUNTER     @"apphype_counter"

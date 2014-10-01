@@ -9,12 +9,23 @@
 #import "LDAppDelegate.h"
 
 #import <FacebookSDK/FacebookSDK.h>
+#import "AppHypeHelper.h"
 
 @implementation LDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [[AppHypeHelper sharedAppHypeHelper] initializeAppHype];
+    if ([[AppHypeHelper sharedAppHypeHelper] adcounter] == 1)
+    {
+        [[AppHypeHelper sharedAppHypeHelper] loadInterstitialAd];
+    }
+    else
+    {
+        [[AppHypeHelper sharedAppHypeHelper] loadVideoAd];
+    }
+    
     return YES;
 }
 							

@@ -9,6 +9,7 @@
 #import "LDGameOverScene.h"
 #import "App42Helper.h"
 #import "LDGameScene.h"
+#import "AppHypeHelper.h"
 
 @implementation LDGameOverScene
 @synthesize obstacleCount = _obstacleCount;
@@ -66,10 +67,23 @@
     submitButton.name = @"submit";
     [submitButton setFontSize:20];
     [self addChild:submitButton];
+    
+    AppHypeHelper *appHypeHelper = [AppHypeHelper sharedAppHypeHelper] ;
+    if (([appHypeHelper adcounter]==1)&&[appHypeHelper isAdAvailable:kInterstitial])
+    {
+        [appHypeHelper showInterstitialAd];
+    }
+    else if (([appHypeHelper adcounter]==2)&&[appHypeHelper isAdAvailable:kVideo])
+    {
+        [appHypeHelper showVideoAd];
+    }
+    
 }
 
--(void)showAcitvityIndicator {
-    if (!activityIndicatorView) {
+-(void)showAcitvityIndicator
+{
+    if (!activityIndicatorView)
+    {
         indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
         [indicatorView setBackgroundColor:[UIColor blackColor]];
         [indicatorView setCenter:self.view.center];
@@ -89,7 +103,9 @@
         [loadingLabel setTextAlignment:NSTextAlignmentCenter];
         [loadingLabel setText:@"Loading..."];
         [loadingLabel setAdjustsFontSizeToFitWidth:YES];
-    } else {
+    }
+    else
+    {
         [activityIndicatorView startAnimating];
         [indicatorView setHidden:NO];
     }
@@ -97,15 +113,19 @@
 
 }
 
--(void)removeAcitvityIndicator {
+-(void)removeAcitvityIndicator
+{
     [self.view setUserInteractionEnabled:YES];
     [activityIndicatorView stopAnimating];
     [indicatorView setHidden:YES];
 }
 
--(void)showFbButtonView {
-    if (fbButtonView) {
-        if ([fbButtonView superview]) {
+-(void)showFbButtonView
+{
+    if (fbButtonView)
+    {
+        if ([fbButtonView superview])
+        {
             [fbButtonView removeFromSuperview];
         }
     }

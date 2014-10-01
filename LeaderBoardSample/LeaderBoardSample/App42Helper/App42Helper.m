@@ -9,7 +9,7 @@
 #import "App42Helper.h"
 #import "LDConstants.h"
 #import "PWFacebookHelper.h"
-
+#import "AppHypeHelper.h"
 
 static App42Helper *app42Instance;
 
@@ -59,6 +59,16 @@ static App42Helper *app42Instance;
         if(game.isResponseSuccess) {
             NSLog(@"saveScore Success");
             _success = true;
+            
+            AppHypeHelper *appHypeHelper = [AppHypeHelper sharedAppHypeHelper] ;
+            if (([appHypeHelper adcounter]==1)&&[appHypeHelper isAdAvailable:kInterstitial])
+            {
+                [appHypeHelper showInterstitialAd];
+            }
+            else if (([appHypeHelper adcounter]==2)&&[appHypeHelper isAdAvailable:kVideo])
+            {
+                [appHypeHelper showVideoAd];
+            }
         }
     }
     @catch (App42Exception *exception) {
